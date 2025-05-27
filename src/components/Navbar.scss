@@ -1,0 +1,21 @@
+// Navbar.scss
+.navbar {
+  width: 100%;
+  background: #000;
+
+  .logo {
+    width: 184px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // 其他排版設定
+  }
+}
