@@ -16,7 +16,7 @@ export default function Navbar() {
         </div>
 
         <div className="login">
-          <a>註冊 / 登入</a>
+          <a href="#">註冊 / 登入</a>
           <span class="material-symbols-outlined">
 search
 </span>

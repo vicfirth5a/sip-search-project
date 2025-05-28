@@ -130,3 +130,7 @@ table {
 a {
   text-decoration: none;
 }
+
+a,body{
+  color: #ECDEC3;
+}

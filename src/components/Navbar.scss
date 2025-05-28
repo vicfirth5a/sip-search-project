@@ -1,13 +1,35 @@
-// Navbar.scss
+@import '../scss/_variable';
+
 .navbar {
+  display: block;
+  padding: 0 34px;
   width: 100%;
   background: #000;
 
   .logo {
-    width: 184px;
+    // width: 104px;
+    padding: 24px 40px;
     img {
-      width: 100%;
+      max-width: 104px;
     }
+  }
+
+  .nav-links{
+    a{
+      padding: 0 32px;
+      &+a{
+        border-left: 1px solid $main-color;
+      };
+    }
+  }
+
+  .login{
+    border: 1px solid $main-color;
+    align-self: stretch;
+    padding: 40px 20px;
+    
+    display: flex;
+    align-items: center;
   }
 
   &-content {
