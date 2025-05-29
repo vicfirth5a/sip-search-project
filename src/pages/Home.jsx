@@ -1,10 +1,11 @@
-import "./Home.scss";
 import Navbar from "../components/Navbar.jsx";
+import Banner from "../components/Banner.jsx";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />;
+      <Navbar />
+      <Banner />
     </div>
   );
 }
