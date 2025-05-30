@@ -1,25 +1,14 @@
-import "./banner.scss";
+import { useState } from "react";
+// import "./banner.scss";
+
+import RecipeFilterModal from "./RecipeFilterModal.jsx";
 export default function Banner() {
   const [showRecipeModal, setShowRecipeModal] = useState(false); // 酒譜modal是否顯示
   const [showBarModal, setShowBarModal] = useState(false); // 酒吧modal是否顯示
   const [selectedRecipeFilters, setSelectedRecipeFilters] = useState([]); // 選中的酒譜條件
   const [selectedBarFilters, setSelectedBarFilters] = useState([]); // 選中的酒吧條件
 
-  // 酒譜篩選選項 - 精簡但有效的分類
-  const recipeOptions = {
-    口感風味: ["清爽系", "香甜系", "濃郁系", "酸甜系", "苦味系", "辛辣系"],
-    基酒類型: [
-      "伏特加",
-      "琴酒",
-      "威士忌",
-      "蘭姆酒",
-      "龍舌蘭",
-      "白蘭地",
-      "其他",
-    ],
-    酒精濃度: ["低酒精 (10-15%)", "中酒精 (15-25%)", "高酒精 (25%+)"],
-    特殊需求: ["無酒精版本", "低卡路里", "不含咖啡因", "適合素食", "經典調酒"],
-  };
+  
   // 模擬酒譜資料 - 展示 API 資料結構
   const sampleCocktails = [
     {
@@ -107,7 +96,11 @@ export default function Banner() {
         </div>
       </div>
 
-      <div className="modal-recipe"></div>
+      <div className="modal-recipe">
+
+
+      {/* <RecipeFilterModal/> */}
+      </div>
     </section>
   );
 }
