@@ -1,44 +1,5 @@
 @import "../scss/_variable";
 
-.section-banner {
-  padding: 294px 312px 190px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url("../assets/banner.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .searchbar {
-    div {
-      position: relative;
-      border: 1px solid $primary2;
-      flex-grow: 1;
-
-      display: flex;
-      // max-width: 500px;
-    }
-    input {
-      background-color: transparent;
-      flex-grow: 1;
-      border: none;
-    }
-    input::placeholder {
-      /* 標準語法 */
-      color: $primary2; /* 將顏色改為您想要的 */
-      opacity: 1; /* 某些瀏覽器預設會降低 placeholder 的透明度，這可以確保它完全顯示 */
-    }
-    span {
-      // border: 1px solid $primary2;
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-    }
-  }
-}
-
-
 .navbar {
   display: block;
   padding: 0 34px;
@@ -84,17 +45,52 @@
   }
 }
 
+.section-banner {
+  padding: 294px 312px 190px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../assets/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  .searchbar {
+    div {
+      position: relative;
+      border: 1px solid $primary2;
+      flex-grow: 1;
 
-.recipe-filter-modal{
+      display: flex;
+      // max-width: 500px;
+    }
+    input {
+      background-color: transparent;
+      flex-grow: 1;
+      border: none;
+    }
+    input::placeholder {
+      /* 標準語法 */
+      color: $primary2; /* 將顏色改為您想要的 */
+      opacity: 1; /* 某些瀏覽器預設會降低 placeholder 的透明度，這可以確保它完全顯示 */
+    }
+    span {
+      // border: 1px solid $primary2;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+}
+
+.recipe-filter-modal {
   padding: 24px 40px;
   margin: auto;
-  width: 500px;
-  height: 500px;
+  // width: 500px;
   background-color: $backgroundColor1;
   font-size: 18px;
-    
-  .close{
+
+  .close {
     display: block;
     width: fit-content;
     margin-left: auto;
@@ -103,27 +99,33 @@
     color: $primary2;
     cursor: pointer;
   }
-  .modal-content{
+  .modal-content {
     margin-bottom: 16px;
-    .modal-title{
+    .modal-title {
       margin-bottom: 10px;
       padding: 8px 16px;
       background-color: $backgroundColor2;
     }
-    .modal-tags{
+    .modal-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      .tag-item{
+      .tag-item {
         border: 1px solid $primary2;
         padding: 8px 16px;
         border-radius: 100px;
         cursor: pointer;
         transition: all 0.3s ease;
-        &:hover{
+        &:hover {
           background-color: $primary1;
         }
       }
     }
+  }
+
+  .btn-confirm {
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
   }
 }

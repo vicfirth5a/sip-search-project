@@ -1,90 +1,31 @@
-import { useState } from "react";
-// import "./banner.scss";
+import { useState, useEffect } from "react";
 
 import RecipeFilterModal from "./RecipeFilterModal.jsx";
 export default function Banner() {
   const [showRecipeModal, setShowRecipeModal] = useState(false); // 酒譜modal是否顯示
-  const [showBarModal, setShowBarModal] = useState(false); // 酒吧modal是否顯示
+
   const [selectedRecipeFilters, setSelectedRecipeFilters] = useState([]); // 選中的酒譜條件
-  const [selectedBarFilters, setSelectedBarFilters] = useState([]); // 選中的酒吧條件
 
-  
-  // 模擬酒譜資料 - 展示 API 資料結構
-  const sampleCocktails = [
-    {
-      id: "mojito-001",
-      name: "經典莫吉托",
-      base_spirit: "蘭姆酒",
-      flavor_profile: "清爽系",
-      alcohol_content: 15.5,
-      special_requirements: ["經典調酒"],
-      tags: ["夏日", "清爽", "薄荷"],
-    },
-    {
-      id: "old-fashioned-001",
-      name: "古典雞尾酒",
-      base_spirit: "威士忌",
-      flavor_profile: "濃郁系",
-      alcohol_content: 32.0,
-      special_requirements: ["經典調酒"],
-      tags: ["經典", "烈酒", "橙皮"],
-    },
-    {
-      id: "virgin-mojito-001",
-      name: "無酒精莫吉托",
-      base_spirit: "其他",
-      flavor_profile: "清爽系",
-      alcohol_content: 0,
-      special_requirements: ["無酒精版本", "低卡路里"],
-      tags: ["無酒精", "清爽", "薄荷"],
-    },
-  ];
-  // 篩選邏輯函數 - 核心的資料處理邏輯
-  const filterCocktails = (cocktails, filters) => {
-    if (!filters || filters.length === 0) return cocktails;
-
-    return cocktails.filter((cocktail) => {
-      // 檢查每個篩選條件是否符合
-      return filters.every((filter) => {
-        const [category, option] = filter.split(":");
-
-        switch (category) {
-          case "口感風味":
-            return cocktail.flavor_profile === option;
-
-          case "基酒類型":
-            return cocktail.base_spirit === option;
-
-          case "酒精濃度":
-            if (option === "低酒精 (10-15%)") {
-              return (
-                cocktail.alcohol_content >= 10 && cocktail.alcohol_content <= 15
-              );
-            } else if (option === "中酒精 (15-25%)") {
-              return (
-                cocktail.alcohol_content > 15 && cocktail.alcohol_content <= 25
-              );
-            } else if (option === "高酒精 (25%+)") {
-              return cocktail.alcohol_content > 25;
-            }
-            return false;
-
-          case "特殊需求":
-            return cocktail.special_requirements.includes(option);
-
-          default:
-            return false;
-        }
-      });
-    });
+  const handleAddRecipeFilter = function (e) {
+    setSelectedRecipeFilters((pre) => [...pre, e.target.textContent]);
+    console.log("準備更新");
   };
+  useEffect(() => {
+    console.log("Updated selectedRecipeFilters:", selectedRecipeFilters); // 這個會在狀態更新並重新渲染元件後紀錄
+  }, [selectedRecipeFilters]);
+  // 模擬酒譜資料 - 展示 API 資料結構
 
   return (
     <section className="section-banner">
       <h2 className="text-center my-6">探索微醺魅力，從這裡開始</h2>
 
       <div className="d-flex gap-2 justify-content-center my-6">
-        <button className="btn btn-primary1 px-5 py-3">找酒譜</button>
+        <button
+          className="btn btn-primary1 px-5 py-3"
+          onClick={() => setShowRecipeModal(!showRecipeModal)}
+        >
+          找酒譜
+        </button>
         <button className="btn btn-primary1 px-5 py-3 bg-light">找酒吧</button>
       </div>
 
@@ -97,9 +38,9 @@ export default function Banner() {
       </div>
 
       <div className="modal-recipe">
-
-
-      {/* <RecipeFilterModal/> */}
+        {showRecipeModal && (
+          <RecipeFilterModal onAddRecipeFilter={handleAddRecipeFilter} />
+        )}
       </div>
     </section>
   );
