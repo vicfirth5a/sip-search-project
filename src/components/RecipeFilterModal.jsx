@@ -6,7 +6,11 @@ const recipeOptions = {
   特殊需求: ["無酒精版本", "低卡路里", "不含咖啡因", "適合素食", "經典調酒"],
 };
 
-export default function recipeFilterModal({ onAddRecipeFilter }) {
+export default function RecipeFilterModal({
+  onFilterClick,
+  onConfirm,
+  selectedRecipeFilters,
+}) {
   return (
     <div className="recipe-filter-modal">
       <span className="material-symbols-outlined close">close</span>
@@ -14,20 +18,28 @@ export default function recipeFilterModal({ onAddRecipeFilter }) {
       <ModalText
         title="口感風味"
         tags={recipeOptions.口感風味}
-        onAddRecipeFilter={onAddRecipeFilter}
+        category="口感風味"
+        onFilterClick={onFilterClick}
+        selectedRecipeFilters={selectedRecipeFilters}
       />
       <ModalText
         title="基酒類型"
         tags={recipeOptions.基酒類型}
-        onAddRecipeFilter={onAddRecipeFilter}
+        category="基酒類型"
+        onFilterClick={onFilterClick}
+        selectedRecipeFilters={selectedRecipeFilters}
       />
       <ModalText
         title="酒精濃度"
         tags={recipeOptions.酒精濃度}
-        onAddRecipeFilter={onAddRecipeFilter}
+        category="酒精濃度"
+        onFilterClick={onFilterClick}
+        selectedRecipeFilters={selectedRecipeFilters}
       />
 
-      <button className="btn-confirm">確認</button>
+      <button className="btn-confirm" onClick={onConfirm}>
+        確認
+      </button>
     </div>
   );
 }
