@@ -1,3 +1,5 @@
+import Navbar from "../components/Navbar";
+
 export default function BarSearch() {
-  return <h1>找酒吧</h1>;
+  return <Navbar />;
 }

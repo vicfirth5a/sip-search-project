@@ -1,19 +1,17 @@
 import ModalText from "./ModalText.jsx";
-const recipeOptions = {
-  口感風味: ["清爽系", "香甜系", "濃郁系", "酸甜系", "苦味系", "辛辣系"],
-  基酒類型: ["伏特加", "琴酒", "威士忌", "蘭姆酒", "龍舌蘭", "白蘭地", "其他"],
-  酒精濃度: ["低酒精 (10-15%)", "中酒精 (15-25%)", "高酒精 (25%+)"],
-  特殊需求: ["無酒精版本", "低卡路里", "不含咖啡因", "適合素食", "經典調酒"],
-};
+import recipeOptions from "../recipeOption.js";
 
 export default function RecipeFilterModal({
   onFilterClick,
   onConfirm,
+  onClose,
   selectedRecipeFilters,
 }) {
   return (
     <div className="recipe-filter-modal">
-      <span className="material-symbols-outlined close">close</span>
+      <span className="material-symbols-outlined close" onClick={onClose}>
+        close
+      </span>
 
       <ModalText
         title="口感風味"
@@ -37,6 +35,7 @@ export default function RecipeFilterModal({
         selectedRecipeFilters={selectedRecipeFilters}
       />
 
+      {/* 希望按下確認按鈕後跳轉至RecipeSearch.jsx頁面，並根據selectedRecipeFilters這個狀態，動態渲染RecipeCard元件 */}
       <button className="btn-confirm" onClick={onConfirm}>
         確認
       </button>

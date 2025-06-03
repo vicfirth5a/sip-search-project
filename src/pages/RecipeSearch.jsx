@@ -1,3 +1,12 @@
+import "./recipeSearch.scss";
+import Navbar from "../components/Navbar.jsx";
+import RecipeResults from "../components/RecipeResults.jsx";
+
 export default function RecipeSearch() {
-  return <h1>找酒譜</h1>;
+  return (
+    <>
+      <Navbar />
+      <RecipeResults />
+    </>
+  );
 }

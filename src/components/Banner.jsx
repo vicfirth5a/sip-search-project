@@ -24,6 +24,18 @@ export default function Banner() {
     console.log("確認選到的篩選條件:", selectedRecipeFilters);
   };
 
+  const handleBackdropClick = function (e) {
+    // 只有當點擊的是背景遮罩本身（不是 modal 內容）時才關閉
+    if (e.target === e.currentTarget) {
+      setShowRecipeModal(false);
+    }
+  };
+
+  //點擊關閉按鈕後關閉modal
+  const handleCloseModal = function () {
+    setShowRecipeModal(false);
+  };
+
   //將選取到的篩選條件從物件(三種條件匯總成一物件)轉換成陣列(每一條件為一個物件，每一個物件為陣列的元素)
   const getSelectedRecipeFilterTags = function () {
     const tags = [];
@@ -53,6 +65,26 @@ export default function Banner() {
   }, [selectedRecipeFilters]);
   // 模擬酒譜資料 - 展示 API 資料結構
 
+  useEffect(() => {
+    const handleEscapeKey = (e) => {
+      if (e.key === "Escape" && showRecipeModal) {
+        setShowRecipeModal(false);
+      }
+    };
+
+    if (showRecipeModal) {
+      document.addEventListener("keydown", handleEscapeKey);
+      //防止背景滾動
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+      //恢復背景滾動
+      document.body.style.overflow = "unset";
+    };
+  }, [showRecipeModal]);
+
   return (
     <section className="section-banner">
       <h2 className="text-center my-6">探索微醺魅力，從這裡開始</h2>
@@ -67,13 +99,13 @@ export default function Banner() {
         <button className="btn btn-primary1 px-5 py-3 bg-light">找酒吧</button>
       </div>
 
-      <div className="d-flex justify-content-center  searchbar">
+      {/* <div className="d-flex justify-content-center  searchbar">
         <div>
           <input type="text" placeholder="立即搜尋" className="px-4 py-3" />
 
           <span className="material-symbols-outlined">search</span>
         </div>
-      </div>
+      </div> */}
 
       {/* 篩選後條件顯示區 */}
       <div className="selected-filters">
@@ -89,15 +121,18 @@ export default function Banner() {
         ))}
       </div>
 
-      <div className="modal-recipe">
-        {showRecipeModal && (
-          <RecipeFilterModal
-            onFilterClick={handleRecipeFilterClick}
-            onConfirm={handleConfirmFilters}
-            selectedRecipeFilters={selectedRecipeFilters}
-          />
-        )}
-      </div>
+      {showRecipeModal && (
+        <div className="modal-backdrop" onClick={handleBackdropClick}>
+          <div className="modal-container">
+            <RecipeFilterModal
+              onFilterClick={handleRecipeFilterClick}
+              onConfirm={handleConfirmFilters}
+              onClose={handleCloseModal}
+              selectedRecipeFilters={selectedRecipeFilters}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
