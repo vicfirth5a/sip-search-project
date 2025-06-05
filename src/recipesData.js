@@ -11,6 +11,11 @@ const recipesData = [
       "https://i.imgur.com/eocXieO.png",
       "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGluZWFwcGxlJTIwY29ja3RhaWx8ZW58MHx8MHx8fDI%3D",
     ],
+    filters: {
+      口感風味: "清爽系",
+      基酒類型: "伏特加",
+      酒精濃度: "低酒精(10-15%)",
+    },
     tags: ["清爽系", "伏特加", "低酒精(10-15%)"],
     ingredients: [
       {
@@ -51,6 +56,11 @@ const recipesData = [
       "https://i.imgur.com/6DGnFqc.png",
       "https://plus.unsplash.com/premium_photo-1661370085023-16bf34456bbf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
+    filters: {
+      口感風味: "香甜系",
+      基酒類型: "琴酒",
+      酒精濃度: "中酒精(15-25%)",
+    },
     tags: ["香甜系", "琴酒", "中酒精(15-25%)"],
     ingredients: [
       {
@@ -83,6 +93,11 @@ const recipesData = [
       "https://i.imgur.com/RyXp6Ds.png",
       "https://images.unsplash.com/photo-1634003311194-152e30e732f7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
+    filters: {
+      口感風味: "濃郁系",
+      基酒類型: "威士忌",
+      酒精濃度: "高酒精(25%+)",
+    },
     tags: ["濃郁系", "威士忌", "高酒精(25%+)"],
     ingredients: [
       {

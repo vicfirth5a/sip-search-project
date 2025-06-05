@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import RecipeFilterModal from "./RecipeFilterModal.jsx";
 export default function Banner() {
+  //建立導航函式
+  const navigate = useNavigate();
+
   const [showRecipeModal, setShowRecipeModal] = useState(false); // 酒譜modal是否顯示
 
   //酒譜類別，每個類別只能選一個選項
@@ -21,7 +25,18 @@ export default function Banner() {
   const handleConfirmFilters = function () {
     //按下確認按鈕後把modal關閉
     setShowRecipeModal(false);
-    console.log("確認選到的篩選條件:", selectedRecipeFilters);
+
+    //使用瀏覽器的原生JS API 建立 URL 查詢參數
+    const params = new URLSearchParams();
+    //將使用者的篩選條件加入params
+    Object.entries(selectedRecipeFilters).forEach(([key, value]) => {
+      if (value !== null) {
+        params.set(key, value);
+      }
+    });
+    //把params解析成字串並導航至該URL(跳轉網頁至該網址)
+    //把篩選條件做為網址，之後會再抓取網址的文字下來篩選酒譜
+    navigate(`/recipes?${params.toString()}`);
   };
 
   const handleBackdropClick = function (e) {

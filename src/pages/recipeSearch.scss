@@ -34,6 +34,13 @@
           background-color: $primary1;
           color: $primary2;
         }
+
+        &.active {
+          background-color: $primary1;
+          color: $primary2;
+          font-weight: bold;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
       }
     }
   }
@@ -42,9 +49,11 @@
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
     .recipe-results-item {
       position: relative;
       width: 25%;
+      min-width: 250px; // 最小寬度
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -81,6 +90,23 @@
       margin-top: auto;
       img {
         width: 100%;
+      }
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: $primary3;
+
+      p {
+        margin-bottom: 10px;
+        font-size: 18px;
+
+        &:first-child {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
       }
     }
   }
