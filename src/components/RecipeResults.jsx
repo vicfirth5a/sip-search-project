@@ -1,9 +1,25 @@
 import { useSearchParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import recipeOptions from "../recipeOption";
 import recipesData from "../recipesData";
 import RecipeCard from "./RecipeCard";
 
 export default function RecipeResults() {
+  const [sortDescending, setSortDescending] = useState(true);
+
+//   function sortByLikes(recipes, sortLikesDescending) {
+//   return recipes.sort((a, b) => {
+//     return sortLikesDescending === true 
+//       ?b.likes - a.likes:a.likes - b.likes;
+//   });
+// }
+
+// function handleSort(recipes){
+//   setSortLikesDescending(pre=>!pre)
+//   sortByLikes(recipes, sortLikesDescending)
+// }
+
+
   //從首頁跳轉過來酒譜頁之後，用來讀取URL參數
   //使用useSearchParams可以在切換網址時re-render，使用內建的URLSearchParams則不會re-render
   const [searchParams] = useSearchParams();
@@ -34,8 +50,25 @@ export default function RecipeResults() {
       return Object.entries(filters).every(([category, value]) => {
         return recipe.filters[category] === value;
       });
-    });
+    })
   };
+
+  const sortRecipesByLikes =(recipes)=>{
+    // 使用 [...recipes] 來創建一個新陣列，避免直接修改原陣列
+    return [...recipes].sort((a,b)=>{
+      if(sortDescending){
+        //遞減排列
+        return b.likes-a.likes
+      }else{
+        //遞增排列
+        return a.likes-b.likes
+      }
+    })
+  }
+  const handleSortToggle=()=>{
+    setSortDescending(!sortDescending)
+  }
+
 
   //點擊酒譜頁上方標籤時，會取得category及option，再與舊的條件比對更新篩選條件
   const handleFilterClick = (category, option) => {
@@ -64,8 +97,10 @@ export default function RecipeResults() {
   const handleClearFilters = () => {
     navigate("/recipes");
   };
-
+//先過濾，再排序
   const filteredRecipes = filterRecipes();
+const sortedRecipes=sortRecipesByLikes(filteredRecipes)
+
   //取得篩選條件物件，後續拿來裝飾樣式
   const activeFilters = getFiltersFromURL();
   const hasActiveFilters = Object.keys(activeFilters).length > 0;
@@ -100,21 +135,56 @@ export default function RecipeResults() {
         })}
       </div>
 
-      {/* 新增：清除篩選按鈕 */}
-      {hasActiveFilters && (
-        <div className="text-center mb-4">
-          <button
-            className="btn btn-outline-primary"
+ {/* 新增：排序控制區域 */}
+      <div className="sort-controls">
+        <div className="sort-info">
+          <span>找到 {sortedRecipes.length} 個酒譜</span>
+          <span className="sort-status">
+            目前排序：按人氣
+            <strong>{sortDescending ? " 由高到低" : " 由低到高"}</strong>
+          </span>
+        </div>
+
+
+        <button
+            className="btn btn-outline-primary ms-auto me-2"
             onClick={handleClearFilters}
+            disabled={!hasActiveFilters}
           >
             清除所有篩選條件
           </button>
-        </div>
-      )}
+        <button 
+          className="btn-sort"
+          onClick={handleSortToggle}
+          title={sortDescending ? "切換為由低到高" : "切換為由高到低"}
+        > <span className="material-symbols-outlined">
+            {sortDescending ? "arrow_downward" : "arrow_upward"}
+          </span>
+          切換排序
+        </button>
+        
+      </div>
 
+
+      {/* 新增：清除篩選按鈕 */}
+       
+        {/* <div className="text-center mb-4">
+          <button
+            className="btn btn-outline-primary"
+            onClick={handleClearFilters}
+            disabled={!hasActiveFilters}
+          >
+            清除所有篩選條件
+          </button>
+
+          
+        </div> */}
+      
+
+      {/* 卡片清單 */}
       <div className="recipe-results-list ">
-        {filteredRecipes.length > 0 ? (
-          filteredRecipes.map((recipe) => {
+        {sortedRecipes.length > 0 ? (
+          sortedRecipes.map((recipe) => {
             return (
               <RecipeCard
                 key={recipe.id}
@@ -123,6 +193,7 @@ export default function RecipeResults() {
                 tags={recipe.tags}
                 description={recipe.description}
                 imgUrl={recipe.imagesUrl[0]}
+                likes={recipe.likes}
               />
             );
           })

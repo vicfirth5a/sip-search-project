@@ -45,6 +45,71 @@
     }
   }
 
+  // 新增：排序控制區域樣式
+  .sort-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding: 0 100px;
+    
+    .sort-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      color: $primary3;
+      
+      span {
+        font-size: 14px;
+        
+        &.sort-status {
+          font-size: 16px;
+          
+          strong {
+            color: $primary1;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    
+    .btn-sort {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background-color: $backgroundColor3;
+      color: $primary3;
+      border: 2px solid $primary1;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      font-weight: 500;
+      
+      .material-symbols-outlined {
+        font-size: 20px;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        background-color: $primary1;
+        color: $backgroundColor3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        .material-symbols-outlined {
+          transform: translateY(2px);
+        }
+      }
+      
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
   .recipe-results-list {
     display: flex;
     justify-content: center;
@@ -61,17 +126,47 @@
       background-color: $backgroundColor3;
       color: $primary3;
 
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+
       .recipe-tag-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 8px;
+
         .recipe-tag-item {
           color: $backgroundColor3;
           background-color: $primary1;
           padding: 4px 8px;
           border-radius: 100px;
+          font-size: 12px;
         }
       }
+     
+      // 新增：酒譜統計資訊樣式
+      .recipe-stats {
+        margin-top: auto;
+        padding-top: 12px;
+        border-top: 1px solid rgba($primary1, 0.2);
+        
+        .likes-count {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          color: $primary1;
+          font-size: 14px;
+          font-weight: 500;
+          
+          .material-symbols-outlined {
+            font-size: 16px;
+            color: #ff6b6b;
+          }
+        }
+      }
+
 
       .arrow {
         color: $primary2;
@@ -81,6 +176,12 @@
         border-radius: 50%;
         cursor: pointer;
         margin-left: auto;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: $primary1;
+          transform: rotate(45deg);
+        }
       }
     }
 
@@ -88,8 +189,11 @@
       display: inline-block;
       width: 45%;
       margin-top: auto;
+
       img {
         width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
     }
 
