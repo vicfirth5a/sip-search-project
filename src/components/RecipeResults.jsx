@@ -7,19 +7,6 @@ import RecipeCard from "./RecipeCard";
 export default function RecipeResults() {
   const [sortDescending, setSortDescending] = useState(true);
 
-//   function sortByLikes(recipes, sortLikesDescending) {
-//   return recipes.sort((a, b) => {
-//     return sortLikesDescending === true 
-//       ?b.likes - a.likes:a.likes - b.likes;
-//   });
-// }
-
-// function handleSort(recipes){
-//   setSortLikesDescending(pre=>!pre)
-//   sortByLikes(recipes, sortLikesDescending)
-// }
-
-
   //從首頁跳轉過來酒譜頁之後，用來讀取URL參數
   //使用useSearchParams可以在切換網址時re-render，使用內建的URLSearchParams則不會re-render
   const [searchParams] = useSearchParams();
@@ -99,7 +86,7 @@ export default function RecipeResults() {
   };
 //先過濾，再排序
   const filteredRecipes = filterRecipes();
-const sortedRecipes=sortRecipesByLikes(filteredRecipes)
+  const sortedRecipes=sortRecipesByLikes(filteredRecipes)
 
   //取得篩選條件物件，後續拿來裝飾樣式
   const activeFilters = getFiltersFromURL();
@@ -216,6 +203,26 @@ const sortedRecipes=sortRecipesByLikes(filteredRecipes)
             />
           );
         })} */}
+      </div>
+
+      {/* 頁碼區 */}
+      {/* 希望每次最多出現6個RecipeCard，<li>最多出現10個頁碼，<select>裡面有所有的頁碼可以選擇 */}
+      <div className="recipe-pagination">
+          <ul>
+            <li>上一頁</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>下一頁</li>
+
+          </ul>
+
+          <select value='共3頁'>
+            <option>
+              第一頁
+            </option>
+          </select>
+
       </div>
     </section>
   );
