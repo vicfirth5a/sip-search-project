@@ -6,6 +6,8 @@ import RecipeCard from "./RecipeCard";
 
 export default function RecipeResults() {
   const [sortDescending, setSortDescending] = useState(true);
+  const [currentPage,setCurrentPage]=useState(1)
+  const itemsPerPage = 6 //每頁顯示6個酒譜
 
   //從首頁跳轉過來酒譜頁之後，用來讀取URL參數
   //使用useSearchParams可以在切換網址時re-render，使用內建的URLSearchParams則不會re-render
@@ -25,14 +27,15 @@ export default function RecipeResults() {
     return filters;
   };
 
+  // 回傳一個滿足條件的所有酒譜陣列
   const filterRecipes = () => {
+    //先從網址取得包含篩選條件的物件
     const filters = getFiltersFromURL();
 
     //沒有篩選條件的話就顯示所有酒譜
     if (Object.keys(filters).length === 0) return recipesData;
 
-    //有篩選條件就把滿足篩選條件的酒譜顯示出來
-    //回傳一個滿足條件的所有酒譜陣列
+    //有篩選條件就回傳一個滿足條件的所有酒譜陣列
     return recipesData.filter((recipe) => {
       return Object.entries(filters).every(([category, value]) => {
         return recipe.filters[category] === value;
@@ -54,8 +57,9 @@ export default function RecipeResults() {
   }
   const handleSortToggle=()=>{
     setSortDescending(!sortDescending)
+    // 排序改變時回到第一頁
+    setCurrentPage(1)
   }
-
 
   //點擊酒譜頁上方標籤時，會取得category及option，再與舊的條件比對更新篩選條件
   const handleFilterClick = (category, option) => {
@@ -78,15 +82,101 @@ export default function RecipeResults() {
     });
 
     navigate(`/recipes?${params.toString()}`, { replace: true });
+
+    //篩選條件改變時回到第一頁
+    setCurrentPage(1)
   };
 
   //清除所有篩選條件
   const handleClearFilters = () => {
     navigate("/recipes");
   };
+
+//分頁相關函數
+
+//計算總頁數
+const getTotalPages=(totalItems)=>{
+  return Math.ceil(totalItems/itemsPerPage)
+}
+//取得當前頁的資料
+const getCurrentPageData=(allData)=>{
+  const startIndex=(currentPage-1)*itemsPerPage;
+  const endIndex=startIndex+itemsPerPage
+  return allData.slice(startIndex,endIndex)
+
+}
+// 處理頁碼點擊
+const handlePageChange=(pageNumber)=>{
+  setCurrentPage(pageNumber)
+  //滾動到頁面頂部，讓使用者看到新內容
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+}
+//處理上一頁
+const handlePrevPage=()=>{
+  if(currentPage>1){
+    handlePageChange(currentPage-1)
+  }
+}
+//處理下一頁
+const handleNextPage=(totalPages)=>{
+  if(currentPage<totalPages){
+    handlePageChange(currentPage+1)
+  }
+}
+//生成要顯示的頁碼陣列
+const getPageNumbers=(totalPages)=>{
+  //等等要跑迴圈把頁碼push進pages陣列
+  const pages=[];
+  //頁碼最多出現10頁
+  const maxVisiblePages=10;
+
+  //先聲明總頁數不超過10頁的，顯示全部頁碼
+  if(totalPages<=maxVisiblePages){
+    for(let i=1;i<=totalPages;i++ ){
+      pages.push(i)
+    }}else{
+  //總頁數超過10頁的，每次都會顯示10個頁碼，這時候就要根據不同情形動態調整startPage與endPage
+  //先想像你要顯示的情況是你的currentPage要在畫面的正中央，假設currentPage是第5頁，那startPage是第1頁，也就是currentPage-4;endPage是第10頁，也就是currentPage+5
+  //會做以下設定是因為如果無腦使用startPage=currentPage - 4;endPage=currentPage + 5，startPage可能會出現負數，endPage可能會出現超過總頁數的情況    
+  let startPage=Math.max(1,currentPage-4)
+  let endPage=Math.min(totalPages,currentPage+5)
+
+  //確定了startPage跟endPage是合理的數字之後，有一個新的問題，就是顯示的頁數可能有時候無法顯示10頁，
+  //第一種情況是因為你的startPage從負數被設定成1，造成你的總頁數<10
+  //第二種情況是因為你的endPage從超過總頁數被設定成總頁數，造成你的總頁數<10
+  // 比如說你在第2頁，起點不會是2-4=-2(不合理)而是1，終點是2+5=7，總頁數不滿10頁
+  // 確保顯示的頁碼數量維持在10個
+  //抓出正確的起點與終點去跑迴圈，就能得到正確要顯示的10個頁數
+  if(endPage-startPage<maxVisiblePages-1){
+        //先處理第一種情形，startPage為1
+        if(startPage===1){
+        //第一種情形是因為你的startPage從負數被設定成1，造成你的總頁數<10，這時候就要向右延伸(改endPage)湊足10頁
+          endPage=10
+        }else{
+          startPage=endPage-(maxVisiblePages-1)
+        }
+      }
+
+  //確定了起點與終點之後跑迴圈取得頁面的陣列
+  for(let i=startPage;i<=endPage;i++){
+    pages.push(i)
+  }  
+}
+return pages
+  
+}
+
 //先過濾，再排序
   const filteredRecipes = filterRecipes();
   const sortedRecipes=sortRecipesByLikes(filteredRecipes)
+
+//分頁功能會用到的相關數據
+const totalPages = getTotalPages(sortedRecipes.length);
+const currentPageData=getCurrentPageData(sortedRecipes)
+const pageNumbers=getPageNumbers(totalPages)
 
   //取得篩選條件物件，後續拿來裝飾樣式
   const activeFilters = getFiltersFromURL();
@@ -152,26 +242,12 @@ export default function RecipeResults() {
         
       </div>
 
-
-      {/* 新增：清除篩選按鈕 */}
-       
-        {/* <div className="text-center mb-4">
-          <button
-            className="btn btn-outline-primary"
-            onClick={handleClearFilters}
-            disabled={!hasActiveFilters}
-          >
-            清除所有篩選條件
-          </button>
-
-          
-        </div> */}
       
 
       {/* 卡片清單 */}
       <div className="recipe-results-list ">
-        {sortedRecipes.length > 0 ? (
-          sortedRecipes.map((recipe) => {
+        {currentPageData.length > 0 ? (
+          currentPageData.map((recipe) => {
             return (
               <RecipeCard
                 key={recipe.id}
@@ -190,40 +266,35 @@ export default function RecipeResults() {
             <p>請試試其他篩選條件</p>
           </div>
         )}
-
-        {/* {recipesData.map((recipe) => {
-          return (
-            <RecipeCard
-              key={recipe.id}
-              title={recipe.title}
-              title_en={recipe.title_en}
-              tags={recipe.tags}
-              description={recipe.description}
-              imgUrl={recipe.imagesUrl[0]}
-            />
-          );
-        })} */}
       </div>
 
       {/* 頁碼區 */}
       {/* 希望每次最多出現6個RecipeCard，<li>最多出現10個頁碼，<select>裡面有所有的頁碼可以選擇 */}
-      <div className="recipe-pagination">
-          <ul>
-            <li>上一頁</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>下一頁</li>
+      {totalPages > 1 && (
+        <div className="recipe-pagination">
+          <ul className="pagination-list">
+            <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}
+              onClick={handlePrevPage}>上一頁</li>
 
+              {/* 頁碼的按鈕 */}
+              {pageNumbers.map((pageNum)=>( <li
+              key={pageNum}
+               className={`page-item ${currentPage === pageNum ? 'active' : ''}`}
+                onClick={() => handlePageChange(pageNum)}
+              >{pageNum}</li>))}
+
+              <li
+              className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}
+              onClick={() => handleNextPage(totalPages)}>下一頁</li>
           </ul>
 
-          <select value='共3頁'>
-            <option>
-              第一頁
-            </option>
+          <select value={currentPage} 
+            onChange={(e) => handlePageChange(Number(e.target.value))}
+            className="page-selector">
+            {Array.from({length:totalPages},(_,index)=>(<option key={index + 1} value={index + 1}>第{index+1}頁</option>))}
           </select>
-
-      </div>
+        </div>
+      )}
     </section>
   );
 }
