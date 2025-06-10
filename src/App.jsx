@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import RecipeSearch from "./pages/RecipeSearch";
+import RecipeContent from "./pages/RecipeContent";
 import BarSearch from "./pages/BarSearch";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipes" element={<RecipeSearch />} />
+        <Route path="/recipeContent" element={<RecipeContent />} />
         <Route path="/bars" element={<BarSearch />} />
       </Routes>
     </BrowserRouter>
