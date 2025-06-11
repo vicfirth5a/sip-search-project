@@ -1,0 +1,36 @@
+@import '../scss/_variable';
+
+.section-recipe-content{
+  max-width: 1296px;
+  margin: auto;
+  padding: 48px;
+  .recipe-content-details{
+    display: flex;
+    justify-content: center;
+    .recipe-pic{
+      width: 30%;
+      img{
+        width: 100%;
+      }
+    }
+    .recipe-txt{
+      width: 70%;
+      .tag-list{
+        display: flex;
+        gap: 8px;
+        .tag-item{
+          padding: 0.5em 1em;
+          border-radius: 100px;
+          border: 1px solid currentColor;
+        }
+      }
+
+      .recipe-practice{
+        .recipe-practice-ingredients{
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
