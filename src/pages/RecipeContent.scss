@@ -1,32 +1,50 @@
-@import '../scss/_variable';
+@import "../scss/_variable";
 
-.section-recipe-content{
+.section-recipe-content {
   max-width: 1296px;
   margin: auto;
   padding: 48px;
-  .recipe-content-details{
+  .recipe-content-details {
     display: flex;
+    gap: 72px;
     justify-content: center;
-    .recipe-pic{
+    align-items: center;
+    .recipe-pic {
       width: 30%;
-      img{
+      img {
         width: 100%;
       }
     }
-    .recipe-txt{
+    .recipe-txt {
       width: 70%;
-      .tag-list{
+      .tag-list {
         display: flex;
         gap: 8px;
-        .tag-item{
+        .tag-item {
           padding: 0.5em 1em;
           border-radius: 100px;
           border: 1px solid currentColor;
         }
       }
 
-      .recipe-practice{
-        .recipe-practice-ingredients{
+      .recipe-description {
+        margin: 30px 0;
+      }
+
+      .recipe-practice {
+        border: 1px solid currentColor;
+        h3 {
+          background-color: $primary1;
+          width: fit-content;
+          padding: 4px 8px;
+        }
+        .main-content {
+          padding: 20px 40px;
+          div + div {
+            margin-top: 20px;
+          }
+        }
+        .recipe-practice-ingredients {
           display: flex;
           flex-wrap: wrap;
         }
