@@ -1,5 +1,4 @@
 @import "../scss/_variable";
-
 .section-recipe-content {
   max-width: 1296px;
   margin: auto;
@@ -48,6 +47,352 @@
           display: flex;
           flex-wrap: wrap;
         }
+      }
+    }
+  }
+}
+
+// 在你的 RecipeContent.scss 檔案中新增以下樣式
+
+.recipe-recommendations {
+  max-width: 1296px;
+  margin: 60px auto 0;
+  padding: 48px;
+  background-color: $primary3;
+  border-top: 2px solid $primary2;
+  // color: $primary2;
+
+  .recommendations-title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .recommendations-subtitle {
+      font-size: 20px;
+      opacity: 0.8;
+    }
+  }
+
+  .recipe-recommendations-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .recommendation-arrow {
+      background-color: $primary1;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+
+      &:hover:not(:disabled) {
+        background-color: darken($primary1, 10%);
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+          transform: none;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .material-symbols-outlined {
+        font-size: 24px;
+      }
+    }
+
+    .recipe-cards-container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      min-height: 400px;
+
+      .recipe-card-wrapper {
+        transition: transform 0.3s ease;
+        display: flex;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+
+        .recipe-results-item {
+          text-align: center;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          padding: 24px;
+          background-color: $backgroundColor3;
+          color: $primary3;
+
+          &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          }
+
+          .pic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 240px;
+            margin-top: auto;
+
+            img {
+              width: 100%;
+              object-fit: cover;
+              display: block;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+          }
+
+          .recipe-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            .recipe-tag-item {
+              color: $backgroundColor3;
+              background-color: $primary1;
+              padding: 6px 12px;
+              border-radius: 100px;
+              font-size: 14px;
+            }
+          }
+
+          // 新增：酒譜統計資訊樣式
+          .recipe-stats {
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid rgba($primary1, 0.2);
+
+            .likes-count {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              color: $primary1;
+              font-size: 14px;
+              font-weight: 500;
+
+              .material-symbols-outlined {
+                font-size: 16px;
+                color: #ff6b6b;
+              }
+            }
+          }
+
+          .arrow {
+            color: $primary2;
+            background-color: $primary3;
+            padding: 7px;
+            width: fit-content;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-left: auto;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: $primary1;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+
+    .slide-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      background-color: rgba($primary1, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.active {
+        background-color: $primary1;
+        transform: scale(1.2);
+      }
+
+      &:hover {
+        background-color: rgba($primary1, 0.6);
+      }
+    }
+  }
+
+  .no-recommendations {
+    text-align: center;
+    padding: 60px 20px;
+    color: $primary3;
+
+    p {
+      font-size: 18px;
+      opacity: 0.7;
+    }
+  }
+
+  .recipe-results-list {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 40px;
+    .recipe-results-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 24px;
+      background-color: $backgroundColor3;
+      color: $primary3;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 240px;
+        margin-top: auto;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          display: block;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .recipe-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .recipe-tag-item {
+          color: $backgroundColor3;
+          background-color: $primary1;
+          padding: 4px 8px;
+          border-radius: 100px;
+          font-size: 12px;
+        }
+      }
+
+      // 新增：酒譜統計資訊樣式
+      .recipe-stats {
+        margin-top: auto;
+        padding-top: 12px;
+        border-top: 1px solid rgba($primary1, 0.2);
+
+        .likes-count {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          color: $primary1;
+          font-size: 14px;
+          font-weight: 500;
+
+          .material-symbols-outlined {
+            font-size: 16px;
+            color: #ff6b6b;
+          }
+        }
+      }
+
+      .arrow {
+        color: $primary2;
+        background-color: $primary3;
+        padding: 7px;
+        width: fit-content;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: auto;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $primary1;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+// 響應式設計
+@media (max-width: 768px) {
+  .recipe-recommendations {
+    padding: 24px 16px;
+
+    .recipe-recommendations-slider {
+      flex-direction: column;
+      gap: 16px;
+
+      .recommendation-arrow {
+        width: 40px;
+        height: 40px;
+
+        .material-symbols-outlined {
+          font-size: 20px;
+        }
+      }
+
+      .recipe-cards-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+    .recommendations-title {
+      h3 {
+        font-size: 20px;
+      }
+
+      .recommendations-subtitle {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-recommendations {
+    .recipe-recommendations-slider {
+      .recommendation-arrow {
+        display: none; // 在很小的螢幕上隱藏箭頭，只靠指示器操作
       }
     }
   }

@@ -159,14 +159,12 @@
   // 加入彈出動畫效果
   animation: slideIn 0.3s ease-out;
 
-  .recipe-filter-modal {
+  .filter-modal {
     padding: 36px 40px;
     background-color: $backgroundColor1;
     font-size: 18px;
-
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-
     border: 1px solid $primary2;
     .close {
       display: block;

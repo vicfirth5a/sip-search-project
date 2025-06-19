@@ -8,7 +8,7 @@ export default function RecipeFilterModal({
   selectedRecipeFilters,
 }) {
   return (
-    <div className="recipe-filter-modal">
+    <div className="filter-modal">
       <span className="material-symbols-outlined close" onClick={onClose}>
         close
       </span>

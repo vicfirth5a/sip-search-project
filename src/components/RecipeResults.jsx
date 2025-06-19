@@ -11,7 +11,7 @@ export default function RecipeResults() {
 
   //從首頁跳轉過來酒譜頁之後，用來讀取URL參數
   //使用useSearchParams可以在切換網址時re-render，使用內建的URLSearchParams則不會re-render
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
   const getFiltersFromURL = () => {
@@ -29,7 +29,7 @@ export default function RecipeResults() {
 
   // 回傳一個滿足條件的所有酒譜陣列
   const filterRecipes = () => {
-    //先從網址取得包含篩選條件的物件
+    //先從網址取得包含"篩選條件"的物件
     const filters = getFiltersFromURL();
 
     //沒有篩選條件的話就顯示所有酒譜
@@ -64,24 +64,32 @@ export default function RecipeResults() {
   //點擊酒譜頁上方標籤時，會取得category及option，再與舊的條件比對更新篩選條件
   const handleFilterClick = (category, option) => {
     //先從目前URL取得篩選條件物件
-    const currentFilters = getFiltersFromURL();
+    // const currentFilters = getFiltersFromURL();
     //先複製一份目前的條件出來，之後要根據點擊的項目更改篩選條件
-    const newFilters = { ...currentFilters };
+    // const newFilters = { ...currentFilters };
 
     //如果點擊的option本來就有了就刪掉那個category(屬性)，沒有就新增進去新篩選條件
-    if (newFilters[category] === option) {
-      delete newFilters[category];
+    const newParams = new URLSearchParams(searchParams);
+    if (newParams.get(category) === option) {
+      newParams.delete(category);
     } else {
-      newFilters[category] = option;
+      newParams.set(category, option);
     }
 
-    //創造新的URL查詢參數後使用navigate導航至該URL(不會重新整理)
-    const params = new URLSearchParams();
-    Object.entries(newFilters).forEach(([key, value]) => {
-      params.append(key, value);
-    });
+    setSearchParams(newParams, { replace: true });
+    // if (newFilters[category] === option) {
+    //   delete newFilters[category];
+    // } else {
+    //   newFilters[category] = option;
+    // }
 
-    navigate(`/recipes?${params.toString()}`, { replace: true });
+    //創造新的URL查詢參數後使用navigate導航至該URL(不會重新整理)
+    // const params = new URLSearchParams();
+    // Object.entries(newFilters).forEach(([key, value]) => {
+    //   params.append(key, value);
+    // });
+
+    // navigate(`/recipes?${params.toString()}`, { replace: true });
 
     //篩選條件改變時回到第一頁
     setCurrentPage(1);
@@ -147,7 +155,7 @@ export default function RecipeResults() {
       //確定了startPage跟endPage是合理的數字之後，有一個新的問題，就是顯示的頁數可能有時候無法顯示10頁，
       //第一種情況是因為你的startPage從負數被設定成1，造成你的總頁數<10
       //第二種情況是因為你的endPage從超過總頁數被設定成總頁數，造成你的總頁數<10
-      // 比如說你在第2頁，起點不會是2-4=-2(不合理)而是1，終點是2+5=7，總頁數不滿10頁
+      // 比如說你在第2頁，起點不會是2-4=-2(不合理)而是1，終點是2+5=7，第1頁~第7頁總頁數不滿10頁
       // 確保顯示的頁碼數量維持在10個
       //抓出正確的起點與終點去跑迴圈，就能得到正確要顯示的10個頁數
       if (endPage - startPage < maxVisiblePages - 1) {
@@ -156,6 +164,7 @@ export default function RecipeResults() {
           //第一種情形是因為你的startPage從負數被設定成1，造成你的總頁數<10，這時候就要向右延伸(改endPage)湊足10頁
           endPage = 10;
         } else {
+          //第二種情形是endPage被設定成總頁數，那就直接從總頁數反推回去獲得10頁
           startPage = endPage - (maxVisiblePages - 1);
         }
       }
@@ -185,18 +194,18 @@ export default function RecipeResults() {
     <section className="section-recipe-results">
       <h2 className="text-center mb-8">輕鬆篩選，找到你的完美調酒</h2>
 
-      <div className="recipe-option-list">
+      <div className="recipe-option-list option-list">
         {Object.entries(recipeOptions).map(([category, options]) => {
           return (
             <div
               className=" recipe-option-item d-flex align-items-center gap-6"
               key={category}
             >
-              <h3 className="recipe-option-title">{category}</h3>
-              <ul className="recipe-option-values">
+              <h3 className="recipe-option-title option-title">{category}</h3>
+              <ul className="recipe-option-values option-values">
                 {options.map((option) => (
                   <li
-                    className={`recipe-option-value
+                    className={`recipe-option-value option-value
                   ${activeFilters[category] === option ? "active" : ""}
                   `}
                     key={option}
