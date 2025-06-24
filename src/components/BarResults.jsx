@@ -110,8 +110,8 @@ export default function BarResults() {
         pages.push(i);
       }
     } else {
-      const startPage = Math.max(1, currentPage - 4);
-      const endPage = Math.min(totalPages, currentPage + 5);
+      let startPage = Math.max(1, currentPage - 4);
+      let endPage = Math.min(totalPages, currentPage + 5);
 
       if (endPage - startPage < maxVisiblePages - 1) {
         if (startPage === 1) {
