@@ -1,6 +1,6 @@
 import { useState } from "react";
 import barOptions from "../barOptions";
-import barsData from "../barsDataNew";
+import barsData from "../barsData";
 import FilterOptionItem from "../components/FilterOptionItem";
 import BarCard from "./BarCard";
 import { useSearchParams, useNavigate } from "react-router-dom";
