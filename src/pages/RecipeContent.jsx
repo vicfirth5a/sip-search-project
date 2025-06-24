@@ -61,7 +61,7 @@ export default function RecipeContent() {
         return recipe.filters[category] === value;
       });
     });
-    //篩選完之後，把陣列傳出來做後續應用
+    //篩選完之後，把酒譜陣列傳出來做後續應用
     return related;
   };
 

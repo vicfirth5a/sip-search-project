@@ -242,7 +242,6 @@ export default function RecipeResults() {
           onClick={handleSortToggle}
           title={sortDescending ? "切換為由低到高" : "切換為由高到低"}
         >
-          {" "}
           <span className="material-symbols-outlined">
             {sortDescending ? "arrow_downward" : "arrow_upward"}
           </span>

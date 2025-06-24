@@ -1,6 +1,6 @@
 import { useState } from "react";
 import barOptions from "../barOptions";
-import barsData from "../barsData";
+import barsData from "../barsDataNew";
 import FilterOptionItem from "../components/FilterOptionItem";
 import BarCard from "./BarCard";
 import { useSearchParams, useNavigate } from "react-router-dom";
@@ -42,6 +42,11 @@ export default function BarResults() {
     });
   };
 
+  const handleSortToggle = () => {
+    setSortDescending(!sortDescending);
+    setCurrentPage(1);
+  };
+
   const handleFilterClick = (district) => {
     //這個函式的主要功能是當Option-list裡面的option被點擊時，會導航至新的網址
     const newParams = new URLSearchParams(searchParams);
@@ -56,6 +61,10 @@ export default function BarResults() {
     }
     setSearchParams(newParams, { replace: true });
     setCurrentPage(1);
+  };
+
+  const handleClearFilters = () => {
+    navigate("/bars");
   };
 
   //分頁相關
@@ -129,6 +138,7 @@ export default function BarResults() {
 
   //取得篩選條件陣列，後續拿來裝飾樣式
   const activeFilters = getFiltersFromURL();
+  const hasActiveFilters = activeFilters.length > 0;
 
   return (
     <section className="section-bar-results">
@@ -145,15 +155,47 @@ export default function BarResults() {
         ))}
       </div>
 
+      {/* 排序控制按鈕 */}
+      <div className="sort-control">
+        <div className="sort-info">
+          <span>找到{sortedBars.length}個酒吧</span>
+          <span className="sort-status">
+            目前排序：按人氣
+            <strong>{sortDescending ? "由高到低" : "由低到高"}</strong>
+          </span>
+        </div>
+
+        <button
+          className="btn-clear-filters"
+          onClick={handleClearFilters}
+          disabled={!hasActiveFilters}
+        >
+          清除所有篩選條件
+        </button>
+
+        <button
+          className="btn-sort"
+          onClick={handleSortToggle}
+          title={sortDescending ? "切換為由低到高" : "切換為由高到低"}
+        >
+          <span className="material-symbols-outlined">
+            {sortDescending ? "arrow_downward" : "arrow_upward"}
+          </span>
+          切換排序
+        </button>
+      </div>
+
       {/* 酒吧搜尋結果卡片   */}
       <div className="bar-results-list ">
         {currentPageData.length > 0 ? (
           currentPageData.map((bar) => (
             <BarCard
               key={bar.id}
+              id={bar.id}
               title={bar.name}
               description={bar.description}
               region={bar.region}
+              type={bar.type}
               imagesUrl={bar.imagesUrl[0]}
               likes={bar.likeCount}
             />

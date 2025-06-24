@@ -1,5 +1,9 @@
 @import "./_variable.scss";
 
+img {
+  vertical-align: bottom;
+}
+
 .option-list {
   max-width: 1296px;
   padding: 0 100px;
@@ -122,5 +126,134 @@
       color: $primary3;
       padding: 8px;
     }
+  }
+}
+
+// 酒吧卡片
+.bar-results-item {
+  position: relative;
+
+  &:hover {
+    .description {
+      opacity: 0;
+    }
+
+    .txt {
+      .button {
+        transform: translate(-50%, -50%);
+      }
+      &::after {
+        background-color: rgba($color: #000000, $alpha: 0.8);
+      }
+    }
+  }
+
+  .txt {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      pointer-events: none;
+      transition: 0.4s;
+    }
+
+    .description {
+      margin-top: auto;
+      // transition: 0.6s;
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+    }
+    .region,
+    .type {
+      width: fit-content;
+      padding: 8px 16px;
+      background-color: rgba($primary1, $alpha: 0.8);
+      border-radius: 100px;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: transparent;
+      border: 1px solid $primary2;
+      transform: translate(-50%, calc(-50% + 600px));
+      padding: 8px 16px;
+      border-radius: 100px;
+      transition: 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary3;
+      }
+    }
+  }
+
+  .likes-icon {
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+}
+
+//footer
+footer {
+  .txt {
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    background-color: $backgroundColor2;
+    font-size: 26px;
+    span {
+      display: block;
+      max-width: 56px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .logo {
+    max-width: 170px;
+    margin: auto;
+    padding: 40px 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 26px;
+    border-top: 1px solid currentColor;
+    padding: 48px 0;
   }
 }

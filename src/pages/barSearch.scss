@@ -2,101 +2,42 @@
 .section-bar-results {
   max-width: 1296px;
   margin: auto;
+
+  .sort-control {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+
+    .sort-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn-clear-filters {
+      padding: 1em 2em;
+      margin-left: auto;
+      background-color: transparent;
+      border: 1px solid $primary2;
+      color: $primary2;
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+
+    .btn-sort {
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+  }
+
   .bar-results-list {
-    margin: 100px 0;
+    margin: 50px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    .bar-results-item {
-      position: relative;
-
-      &:hover {
-        &::after {
-          background-color: rgba($color: #000000, $alpha: 0.8);
-        }
-
-        .description {
-          display: none;
-        }
-
-        .txt {
-          .button {
-            transform: translate(-50%, -50%);
-          }
-        }
-      }
-      .pic {
-        aspect-ratio: 4 / 3;
-        width: 100%;
-
-        img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          object-fit: cover;
-        }
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-color: rgba($color: #000000, $alpha: 0.6);
-        pointer-events: none;
-        transition: 0.4s;
-      }
-
-      .txt {
-        width: 100%;
-        padding: 40px;
-        font-size: 20px;
-        line-height: 1.5;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        overflow: hidden;
-
-        .description {
-          margin-top: auto;
-          // transition: 0.6s;
-        }
-
-        .region {
-          width: fit-content;
-          padding: 8px 16px;
-          background-color: rgba($primary1, $alpha: 0.8);
-          border-radius: 100px;
-          margin-top: auto;
-        }
-
-        .button {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          background-color: transparent;
-          border: 1px solid $primary2;
-          transform: translate(-50%, calc(-50% + 600px));
-          padding: 8px 16px;
-          border-radius: 100px;
-          transition: 0.4s;
-          cursor: pointer;
-
-          &:hover {
-            background-color: $primary3;
-          }
-        }
-      }
-
-      .likes-icon {
-        margin-left: auto;
-      }
-    }
   }
 }

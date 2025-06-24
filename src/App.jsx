@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import RecipeSearch from "./pages/RecipeSearch";
 import RecipeContent from "./pages/RecipeContent";
 import BarSearch from "./pages/BarSearch";
+import BarContent from "./pages/BarContent";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         <Route path="/recipes" element={<RecipeSearch />} />
         <Route path="/recipeContent/:id" element={<RecipeContent />} />
         <Route path="/bars" element={<BarSearch />} />
+        <Route path="/barContent/:id" element={<BarContent />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
