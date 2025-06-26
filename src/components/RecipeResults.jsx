@@ -1,10 +1,12 @@
 import { useSearchParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import recipeOptions from "../recipeOption";
-import recipesData from "../recipesData";
+// import recipesData from "../recipesData";
 import RecipeCard from "./RecipeCard";
+import { fetchRecipesData } from "../api/dataService.js";
 
 export default function RecipeResults() {
+  const [recipesData, setRecipesData] = useState([]);
   const [sortDescending, setSortDescending] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6; //每頁顯示6個酒譜
@@ -13,6 +15,10 @@ export default function RecipeResults() {
   //使用useSearchParams可以在切換網址時re-render，使用內建的URLSearchParams則不會re-render
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchRecipesData().then((data) => setRecipesData(data));
+  }, []);
 
   const getFiltersFromURL = () => {
     const filters = {};

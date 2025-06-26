@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import barOptions from "../barOptions";
-import barsData from "../barsData";
+// import barsData from "../barsData";
 import FilterOptionItem from "../components/FilterOptionItem";
 import BarCard from "./BarCard";
 import { useSearchParams, useNavigate } from "react-router-dom";
+import { fetchBarsData } from "../api/dataService.js";
 
 export default function BarResults() {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const [barsData, setBarsData] = useState([]);
   const [sortDescending, setSortDescending] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6; //每頁顯示6個酒譜
+
+  useEffect(() => {
+    fetchBarsData().then((data) => setBarsData(data));
+  }, []);
 
   //從URL取得篩選"使用者選取的地區"陣列
   const getFiltersFromURL = () => {
