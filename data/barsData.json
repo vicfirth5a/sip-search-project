@@ -1,0 +1,617 @@
+[
+  {
+    "id": 1,
+    "name": "Indulge Experimental Bistro",
+    "description": "位於台北市大安區的 Indulge Experimental Bistro 是一家結合創意調酒與美食的特色酒吧，以台灣在地食材與現代混搭風格聞名，提供茶香雞尾酒與舒適的用餐環境。這裡的調酒師善於運用台灣特色茶葉和水果，創造出獨一無二的調酒體驗。",
+    "region": "台北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 128,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "ON TAP",
+    "description": "位在東區的英式酒吧on tap，店內佈置得讓人感覺真的置身國外，除了一樓以外，地下也有不少座位，還有大型電視跟撞球桌可以玩，電視通常會播電影或是運動賽事，如果你也是個運動咖，適逢經典賽事，非常推薦邀約三五好友一起到on tap觀賽，氣氛滿點！",
+    "region": "台北市",
+    "category": "北部",
+    "type": "運動酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 60,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "菱玖洋服",
+    "description": "這間菱玖洋服也是珍貴的口袋名單，位在捷運國父紀念館附近，可能常常會經過，但很少多看一眼，因為它的外觀就真的是一間西裝店的樣子，但其實是一間氣氛好、餐點又好吃（去過的朋友們都大推特推他們的鹹食）的speakeasy bar。",
+    "region": "台北市",
+    "category": "北部",
+    "type": "音樂酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 100,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Halfway There",
+    "description": "半路餐酒館位在捷運信義安和站附近，它的餐點非常精緻好吃，所以如果還沒吃晚餐又想要小酌一下的話，那麼非常推薦半路！半路酒吧最知名的調酒就是他們的一大鍋Vodka雞尾酒，有不少口味，包括了桃子、百香果、莓果等",
+    "region": "台北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 128,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Draft Land",
+    "description": "如果你住在台北，那麼Draft Land你一定不陌生！就算沒有喝過，也一定會經過過，因為他就位在信義區的市政府捷運站附近，晚上常常會看到許多人站在微風信義和信義誠品中間那條路上小酌，那就是Draft Land！",
+    "region": "台北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 80,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "OriginBAR",
+    "description": "OriginBAR目前在台北有「源」跟「初」兩間店，「源」位在南京東路上，「初」則是在東區附近。兩家店的氛圍都非常吸引人，調酒的名稱都很特別，光是看酒單就可以找到很多樂趣！有許多以茶為主要基調的調酒，喜歡茶酒的話一定要來試試。",
+    "region": "台北市",
+    "category": "北部",
+    "type": "音樂酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 158,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kitty Taipei",
+    "description": "2019在東區新開幕的Kitty Taipei！店外的裝潢已經讓人眼睛為之一亮，店內走美式復古的風格，有一個大大的吧台，也有比較隱密的大長桌包廂。老闆人很好也非常大方，喜歡喝什麼口味的酒都可以馬上調給你，是一家氣氛非常好的酒吧！",
+    "region": "台北市",
+    "category": "北部",
+    "type": "運動酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 90,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "name": "爛泥",
+    "description": "爛泥是一間非常有質感的酒吧，整體裝潢走工業風，店內空間讓人感覺很寬闊舒服，不會人擠人的，可以跟朋友們舒舒服服的坐下來喝酒享受。而且不只是環境很漂亮，他們家的菜單、調酒跟餐點也都做得很精緻、有質感，每上一杯都是一個驚喜的感覺，如果你喜歡這樣特別的酒吧，想要一個有儀式感的夜晚，推薦爛泥！",
+    "region": "台北市",
+    "category": "北部",
+    "type": "音樂酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 110,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "name": "榕",
+    "description": "榕是一間很有質感的酒吧，白天是佇足享受的咖啡廳，晚上化身氣氛佳的酒吧。目前有兩間分店，分別在士林跟信義，士林總店人一種復古文青感，在那裡喝酒就像是和一群老朋友們聚在一起，又懷舊又熟悉。相比之下，榕信義就具有更多現代感，仔細一看他們的酒單會發現非常特別，好像都是你知道的調酒，卻又有一點不一樣，他們加入了自己的創意，以音樂為名的調酒更讓人沉醉，推薦給大家。",
+    "region": "台北市",
+    "category": "北部",
+    "type": "音樂酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 130,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "name": "HANKO 60",
+    "description": "你一定有在朋友的ig限時動態裡面看過這四個大大的字「如醉如夢」，這其實是一間位在西門町的復古酒吧，外觀偽裝成「新聲大戲院」其實按下旁邊的開關門就會打開、帶你進入這個如醉如夢的世界。而如醉如夢確實是他們招牌調酒的名字，以伏特加為基底、加入水蜜桃利口酒、蔓越莓汁和玫瑰鹽，盛裝在古色古香的茶具中，打開還會冒出陣陣煙香，給人一種浪漫但又迷濛沉醉的感覺。如果你覺得生活無色無味，想要給自己一個不一樣的夜晚，那HANKO 60絕對是個好選擇！",
+    "region": "台北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 90,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "台北市大安區復興南路一段219巷11號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "14:30-00:00",
+        "monday": "14:30-00:00",
+        "tuesday": "休息",
+        "wednesday": "14:30-00:00",
+        "thursday": "14:30-00:00",
+        "friday": "14:30-00:00",
+        "saturday": "14:30-00:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "14:30-00:00",
+        "closingTime": "00:00"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "name": "汲寂",
+    "description": "這是一間風格獨具的小酒吧，主理人 Rico 以對雞尾酒本質的深刻探索，賦予這裡一種近乎禪意的純粹。「汲」，象徵著對素材的細膩選取與調製；「寂」，則是對繁複風格的摒棄與回歸本源。沒有花俏的裝飾，只有最合理的製程與最誠實的風味，每一杯酒都像一段靜謐對話，讓人沉醉於酒液與時間交織的片刻。",
+    "region": "新北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 30,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "新北市樹林區學勤路462號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "18:30-01:00",
+        "monday": "18:30-01:00",
+        "tuesday": "休息",
+        "wednesday": "18:30-01:00",
+        "thursday": "18:30-01:00",
+        "friday": "18:30-01:00",
+        "saturday": "18:30-01:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "18:30-01:00",
+        "closingTime": "01:00"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "name": "Bar無為",
+    "description": "藏身四號公園附近冰店二樓的六席安靜小酒吧，只提供經典調酒。店名「無為」即展現店主對做酒的態度：無機心而為之，代表店主並沒有刻意想創造一杯什麼樣的調酒，而只是將一杯調酒所使用的材料藉由最基本的手法，只用融水及充氣去把風味和酒體本性展現出來而已。店內環境及調酒呈現都圍繞著「無為」二字，素雅、簡單，內斂，沒有過多的裝飾及音樂，沈靜的氛圍讓人在這紛擾快節奏的時代洪流中把心先安定下來，再藉由品飲與自己對話，讓自己先回歸到一個最存粹的個人，最後讓喝調酒這件事回到調酒本身。",
+    "region": "新北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 48,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "新北市中和區新興街6巷12號2樓",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "18:30-01:00",
+        "monday": "18:30-01:00",
+        "tuesday": "休息",
+        "wednesday": "18:30-01:00",
+        "thursday": "18:30-01:00",
+        "friday": "18:30-01:00",
+        "saturday": "18:30-01:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "18:30-01:00",
+        "closingTime": "01:00"
+      }
+    }
+  },
+  {
+    "id": 13,
+    "name": "花酒間",
+    "description": "說到三鶯地區最值得一訪，非該酒吧莫屬，以「新與舊的碰撞」為核心理念，揉合當代調酒技法與傳統東方素材，創造出獨樹一格的品飲體驗。主理人 Lianne 與 Alain 皆為年輕卻堅定的調酒新星，不惜雙雙輟學，只為專注於這場酒香與人生的冒險。他們笑著引用《桃花庵歌》裡的詩句：「不願鞠躬車馬前，但願老死花酒間」，道出對這條路的浪漫與執著。",
+    "region": "新北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 38,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "新北市三峽區三樹路69號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "18:30-01:00",
+        "monday": "18:30-01:00",
+        "tuesday": "休息",
+        "wednesday": "18:30-01:00",
+        "thursday": "18:30-01:00",
+        "friday": "18:30-01:00",
+        "saturday": "18:30-01:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "18:30-01:00",
+        "closingTime": "01:00"
+      }
+    }
+  },
+  {
+    "id": 14,
+    "name": "千手",
+    "description": " 隱身於新北中永和的靜謐街巷之中，自 2023 年 5 月開幕以來，便以低調內斂的姿態，在在地酒吧版圖中悄然奠定風格。由七位風格各異的調酒師共同創立，他們立下誓言：「我們要做雙和最強！」這不只是口號，更是對調酒品質與氛圍營造的堅持。走進店內，仿若穿越至日本街巷中的一間靜謐小酒館——內斂肅穆的外觀搭配枯山水角落與溫潤日式元素，彷彿為喧囂生活按下暫停鍵。Bar千手的存在，就是為了讓人們在住家附近也能喝到高品質調酒，並在熟悉的社區裡，找到一處療癒身心的角落。",
+    "region": "新北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 58,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "新北市中和區安平路109號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "18:30-01:00",
+        "monday": "18:30-01:00",
+        "tuesday": "休息",
+        "wednesday": "18:30-01:00",
+        "thursday": "18:30-01:00",
+        "friday": "18:30-01:00",
+        "saturday": "18:30-01:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "18:30-01:00",
+        "closingTime": "01:00"
+      }
+    }
+  },
+  {
+    "id": 15,
+    "name": "Guru House",
+    "description": " 一個顛覆你對「早午餐」與「酒吧」既定印象的創意空間。在這裡，早餐不再只是匆忙的日常，而是一種可以微醺地開始每一天的生活態度。品牌創立於三位好友的某個深夜對談中，彼時他們一邊喝酒一邊思考現代都市人被壓力推著走的生活，萌生了打造「早午餐酒吧」的念頭。於是，Guru House 應運而生，一個讓人可以「吃、飽、喝、醉」放鬆地享受早晨與白晝的所在，也是一種對生活節奏重新定義的提案。",
+    "region": "新北市",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 48,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "imagesUrl": [
+      "https://images.unsplash.com/photo-1618659525444-49206d11d0b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556855810-ac404aa91e85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1619864330819-dd4219766e9c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618683742424-0d7c96d49b54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1569924995007-e591d333f882?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574071318537-1c5c7f4b570d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "contactInfo": {
+      "address": "新北市中和區中安街210號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "openingHours": {
+        "sunday": "18:30-01:00",
+        "monday": "18:30-01:00",
+        "tuesday": "休息",
+        "wednesday": "18:30-01:00",
+        "thursday": "18:30-01:00",
+        "friday": "18:30-01:00",
+        "saturday": "18:30-01:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "18:30-01:00",
+        "closingTime": "01:00"
+      }
+    }
+  }
+]
