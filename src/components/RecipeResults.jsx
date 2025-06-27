@@ -68,7 +68,7 @@ function OptionGroup({ category, options, activeFilter, onFilterClick }) {
   }, [options]);
 
   return (
-    <div className="recipe-option-item d-flex align-items-center gap-6">
+    <div className="recipe-option-item ">
       <h3 className="recipe-option-title option-title">{category}</h3>
 
       <div className="option-values-wrapper">

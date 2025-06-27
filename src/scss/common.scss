@@ -8,22 +8,91 @@ img {
   max-width: 1296px;
   padding: 0 100px;
   margin: auto;
+
   .option-title {
     display: inline-block;
   }
-  .option-values {
+
+  .option-values-wrapper{
+     position: relative;
     width: 0;
     flex-grow: 1;
+    border: 1px solid $primary1;
+    border-radius: 1000px;
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $backgroundColor3;
+    border: 1px solid $primary1;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    &.scroll-btn-left {
+      left: 8px;
+    }
+    
+    &.scroll-btn-right {
+      right: 8px;
+    }
+    
+    &:hover:not(.disabled) {
+      background-color: $primary1;
+      color: $backgroundColor3;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      
+      .material-symbols-outlined {
+        color: $backgroundColor3;
+      }
+    }
+    
+    &:active:not(.disabled) {
+      transform: translateY(-50%) scale(0.95);
+    }
+    
+    &.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      background-color: rgba($primary3, 0.1);
+    }
+    
+    .material-symbols-outlined {
+      font-size: 20px;
+      color: $primary1;
+      transition: color 0.3s ease;
+    }
+  }
+
+  .option-values {
+    // width: 0;
+    // flex-grow: 1;
+    width: 100%;
     overflow-x: auto;
     white-space: nowrap;
     display: flex;
     align-items: center;
     gap: 16px;
-    border: 1px solid $primary1;
     padding: 12px 24px;
-    border-radius: 1000px;
-    margin-bottom: 16px;
+    list-style: none;
+    scroll-behavior: smooth;
+    // border: 1px solid $primary1;
+    // border-radius: 1000px;
+    // margin-bottom: 16px;
 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     &::-webkit-scrollbar {
       display: none; // 隱藏捲軸（Chrome/Safari）
     }
@@ -35,10 +104,14 @@ img {
       border-radius: 1000px;
       cursor: pointer;
       transition: 0.3s;
+      flex-shrink: 0;
+      user-select: none;
 
       &:hover {
         background-color: $primary1;
         color: $primary2;
+                transform: translateY(-1px);
+
       }
 
       &.active {
@@ -47,6 +120,41 @@ img {
         font-weight: bold;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
+    }
+  }
+  }
+  
+   // 當滾動按鈕顯示時，為選項內容添加左右邊距
+  .option-values-wrapper:has(.scroll-btn) .option-values {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+@media (max-width: 992px) {
+  .option-list {
+    padding: 0 20px;
+ 
+    .option-title {
+      text-align: center;
+    }
+    
+    .option-values-wrapper {
+      width: 100%;
+    }
+    
+    .scroll-btn {
+      width: 32px;
+      height: 32px;
+      
+      .material-symbols-outlined {
+        font-size: 18px;
+      }
+    }
+    
+    .option-values-wrapper:has(.scroll-btn) .option-values {
+      padding-left: 44px;
+      padding-right: 44px;
     }
   }
 }

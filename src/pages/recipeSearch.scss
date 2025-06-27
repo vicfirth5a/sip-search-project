@@ -5,6 +5,13 @@
   margin: auto;
   padding: 48px 0;
 
+  .recipe-option-item{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    
+  }
+
   // 新增：排序控制區域樣式
   .sort-controls {
     display: flex;
@@ -275,11 +282,19 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .section-recipe-results {
     .recipe-option-list {
       padding: 0 20px;
+
+      .recipe-option-item {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 12px !important;
     }
+    }
+
+   
 
     .sort-controls {
       padding: 0 20px;
