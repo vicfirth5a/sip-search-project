@@ -24,6 +24,10 @@ img {
     border-radius: 1000px;
     margin-bottom: 16px;
 
+    &::-webkit-scrollbar {
+      display: none; // 隱藏捲軸（Chrome/Safari）
+    }
+
     .option-value {
       color: $primary1;
       border: 1px solid $primary1;

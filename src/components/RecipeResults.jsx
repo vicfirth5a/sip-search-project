@@ -1,9 +1,126 @@
 import { useSearchParams, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import recipeOptions from "../recipeOption";
 // import recipesData from "../recipesData";
 import RecipeCard from "./RecipeCard";
 import { fetchRecipesData } from "../api/dataService.js";
+
+function OptionGroup({ category, options, activeFilter, onFilterClick }) {
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [showScrollButtons, setShowScrollButtons] = useState(false);
+
+  // 檢查是否需要滾動按鈕
+  const checkScrollability = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const { scrollWidth, clientWidth, scrollLeft } = container;
+
+    // 判斷是否需要顯示滾動按鈕（內容寬度大於容器寬度）
+    setShowScrollButtons(scrollWidth > clientWidth);
+
+    // 判斷左右按鈕的啟用狀態
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+  };
+
+  // 處理滾動
+  const handleScroll = (direction) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const scrollAmount = 200; // 每次滾動 200px
+    const currentScroll = container.scrollLeft;
+    const targetScroll =
+      direction === "left"
+        ? currentScroll - scrollAmount
+        : currentScroll + scrollAmount;
+
+    container.scrollTo({
+      left: targetScroll,
+      behavior: "smooth",
+    });
+  };
+
+  // 監聽滾動事件和視窗大小變化
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    // 初次檢查
+    checkScrollability();
+
+    const handleScrollEvent = () => checkScrollability();
+    const handleResize = () => {
+      // 延遲檢查，確保重新渲染完成
+      setTimeout(checkScrollability, 100);
+    };
+
+    container.addEventListener("scroll", handleScrollEvent);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      container.removeEventListener("scroll", handleScrollEvent);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [options]);
+
+  return (
+    <div className="recipe-option-item d-flex align-items-center gap-6">
+      <h3 className="recipe-option-title option-title">{category}</h3>
+
+      <div className="option-values-wrapper">
+        {/* 左滾動按鈕 */}
+        {showScrollButtons && (
+          <button
+            className={`scroll-btn scroll-btn-left ${
+              !canScrollLeft ? "disabled" : ""
+            }`}
+            onClick={() => handleScroll("left")}
+            disabled={!canScrollLeft}
+            aria-label="向左滾動"
+          >
+            <span className="material-symbols-outlined">chevron_left</span>
+          </button>
+        )}
+
+        {/* 選項容器 */}
+        <ul
+          className="recipe-option-values option-values"
+          ref={scrollContainerRef}
+        >
+          {options.map((option) => (
+            <li
+              className={`recipe-option-value option-value ${
+                activeFilter === option ? "active" : ""
+              }`}
+              key={option}
+              onClick={() => onFilterClick(category, option)}
+            >
+              {option}
+            </li>
+          ))}
+        </ul>
+
+        {/* 右滾動按鈕 */}
+        {showScrollButtons && (
+          <button
+            className={`scroll-btn scroll-btn-right ${
+              !canScrollRight ? "disabled" : ""
+            }`}
+            onClick={() => handleScroll("right")}
+            disabled={!canScrollRight}
+            aria-label="向右滾動"
+          >
+            <span className="material-symbols-outlined">chevron_right</span>
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function RecipeResults() {
   const [recipesData, setRecipesData] = useState([]);
@@ -201,8 +318,18 @@ export default function RecipeResults() {
       <h2 className="text-center mb-8">輕鬆篩選，找到你的完美調酒</h2>
 
       <div className="recipe-option-list option-list">
-        {Object.entries(recipeOptions).map(([category, options]) => {
-          return (
+        {Object.entries(recipeOptions).map(
+          ([category, options]) => (
+            <OptionGroup
+              key={category}
+              category={category}
+              options={options}
+              activeFilter={activeFilters[category]}
+              onFilterClick={handleFilterClick}
+            />
+          )
+
+          /* return (
             <div
               className=" recipe-option-item d-flex align-items-center gap-6"
               key={category}
@@ -222,8 +349,8 @@ export default function RecipeResults() {
                 ))}
               </ul>
             </div>
-          );
-        })}
+          ); */
+        )}
       </div>
 
       {/* 新增：排序控制區域 */}
