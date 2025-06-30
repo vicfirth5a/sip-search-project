@@ -3,41 +3,19 @@
   max-width: 1296px;
   margin: auto;
 
-  .sort-control {
-    padding-top: 40px;
-    display: flex;
-    align-items: center;
-
-    .sort-info {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .btn-clear-filters {
-      padding: 1em 2em;
-      margin-left: auto;
-      background-color: transparent;
-      border: 1px solid $primary2;
-      color: $primary2;
-      &:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
-      }
-    }
-
-    .btn-sort {
-      padding: 1em 2em;
-      display: flex;
-      align-items: center;
-      margin-left: 10px;
-    }
-  }
-
   .bar-results-list {
-    margin: 50px 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(var(--col-count), 1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: 20px 20px;
+
+    @media (max-width: 992px) {
+      gap: 16px 10px;
+      padding: 0 40px;
+    }
+    @media (max-width: 768px) {
+      padding-inline: 60px;
+    }
   }
 }

@@ -68,8 +68,8 @@ function OptionGroup({ category, options, activeFilter, onFilterClick }) {
   }, [options]);
 
   return (
-    <div className="recipe-option-item ">
-      <h3 className="recipe-option-title option-title">{category}</h3>
+    <div className="option-item">
+      <h3 className="option-title">{category}</h3>
 
       <div className="option-values-wrapper">
         {/* 左滾動按鈕 */}
@@ -87,13 +87,10 @@ function OptionGroup({ category, options, activeFilter, onFilterClick }) {
         )}
 
         {/* 選項容器 */}
-        <ul
-          className="recipe-option-values option-values"
-          ref={scrollContainerRef}
-        >
+        <ul className="option-values" ref={scrollContainerRef}>
           {options.map((option) => (
             <li
-              className={`recipe-option-value option-value ${
+              className={`option-value ${
                 activeFilter === option ? "active" : ""
               }`}
               key={option}
@@ -355,16 +352,16 @@ export default function RecipeResults() {
 
       {/* 新增：排序控制區域 */}
       <div className="sort-controls">
-        <div className="sort-info">
+        {/* <div className="sort-info">
           <span>找到 {sortedRecipes.length} 個酒譜</span>
           <span className="sort-status">
             目前排序：按人氣
             <strong>{sortDescending ? " 由高到低" : " 由低到高"}</strong>
           </span>
-        </div>
+        </div> */}
 
         <button
-          className="btn btn-outline-primary ms-auto me-2"
+          className="btn-clear"
           onClick={handleClearFilters}
           disabled={!hasActiveFilters}
         >
@@ -380,6 +377,14 @@ export default function RecipeResults() {
           </span>
           切換排序
         </button>
+      </div>
+
+      <div className="sort-info">
+        <span>找到 {sortedRecipes.length} 個酒譜</span>
+        <span className="sort-status">
+          目前排序：按人氣
+          <strong>{sortDescending ? " 由高到低" : " 由低到高"}</strong>
+        </span>
       </div>
 
       {/* 卡片清單 */}
@@ -410,10 +415,12 @@ export default function RecipeResults() {
       {/* 頁碼區 */}
       {/* 希望每次最多出現6個RecipeCard，<li>最多出現10個頁碼，<select>裡面有所有的頁碼可以選擇 */}
       {totalPages > 1 && (
-        <div className="recipe-pagination">
+        <div className="pagination">
           <ul className="pagination-list">
             <li
-              className={`page-item ${currentPage === 1 ? "disabled" : ""}`}
+              className={`pagination-item ${
+                currentPage === 1 ? "disabled" : ""
+              }`}
               onClick={handlePrevPage}
             >
               上一頁
@@ -423,7 +430,7 @@ export default function RecipeResults() {
             {pageNumbers.map((pageNum) => (
               <li
                 key={pageNum}
-                className={`page-item ${
+                className={`pagination-item ${
                   currentPage === pageNum ? "active" : ""
                 }`}
                 onClick={() => handlePageChange(pageNum)}
@@ -433,7 +440,7 @@ export default function RecipeResults() {
             ))}
 
             <li
-              className={`page-item ${
+              className={`pagination-item ${
                 currentPage === totalPages ? "disabled" : ""
               }`}
               onClick={() => handleNextPage(totalPages)}

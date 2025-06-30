@@ -17,11 +17,30 @@ export default function BarContent() {
   // 用來存放相關推薦酒吧
   const [recommendedBars, setRecommendedBars] = useState([]);
 
+  //推薦酒吧每次顯示的卡片數量
+  const [cardsPerSlide, setCardsPerSlide] = useState(() => {
+    if (window.innerWidth < 768) return 1;
+    if (window.innerWidth < 992) return 2;
+    return 3;
+  });
+
   //推薦酒吧slide的當前索引
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  //推薦酒吧每次顯示的卡片數量
-  const cardsPerSlide = 3;
+  //綁定監聽器，監聽設備寬度改變投影片張數
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerSlide(1);
+      } else if (window.innerWidth < 992) {
+        setCardsPerSlide(2);
+      } else {
+        setCardsPerSlide(3);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   //每次id變化就找到對應的酒吧
   useEffect(() => {
@@ -137,8 +156,6 @@ export default function BarContent() {
         </div>
 
         <div className="bar-contact-info">
-          <div className="bar-contact-info__map"></div>
-
           <div className="bar-contact-info__txt">
             <div className="bar-contact-info__details mb-1">
               <h3 className="bar-contact-info__title bg-primary1 py-4">
@@ -158,6 +175,8 @@ export default function BarContent() {
               <OpeningHours bar={bar} />
             </div>
           </div>
+
+          <div className="bar-contact-info__map"></div>
         </div>
       </section>
 
@@ -167,39 +186,48 @@ export default function BarContent() {
           <p>基於相同的地區、酒吧類型推薦</p>
         </div>
 
-        <div className="bar-recommendations-slider">
-          <button
-            className="recommendation-arrow recommendation-arrow--prev"
-            onClick={handlePrevSlide}
-            disabled={totalSlides <= 1}
-          >
-            <span className="material-symbols-outlined">chevron_left</span>
-          </button>
+        {recommendedBars.length > 0 ? (
+          <>
+            <div className="bar-recommendations-slider">
+              {/* 左箭頭 */}
+              <button
+                className="recommendation-arrow recommendation-arrow--prev"
+                onClick={handlePrevSlide}
+                disabled={totalSlides <= 1}
+              >
+                <span className="material-symbols-outlined">chevron_left</span>
+              </button>
 
-          <div className="bar-cards-container">
-            <div className="bar-card-wrapper">
-              {getCurrentSlideBars().map((bar) => (
-                <BarCard
-                  id={bar.id}
-                  title={bar.name}
-                  description={bar.description}
-                  region={bar.region}
-                  type={bar.type}
-                  imagesUrl={bar.imagesUrl[0]}
-                  likes={bar.likeCount}
-                />
-              ))}
+              <div className="bar-cards-container">
+                {getCurrentSlideBars().map((bar) => (
+                  <div className="bar-card-wrapper" key={bar.id}>
+                    <BarCard
+                      id={bar.id}
+                      title={bar.name}
+                      description={bar.description}
+                      region={bar.region}
+                      type={bar.type}
+                      imagesUrl={bar.imagesUrl[0]}
+                      likes={bar.likeCount}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <button
+                className="recommendation-arrow recommendation-arrow--next"
+                onClick={handleNextSlide}
+                disabled={totalSlides <= 1}
+              >
+                <span className="material-symbols-outlined">chevron_right</span>
+              </button>
             </div>
+          </>
+        ) : (
+          <div className="no-recommendations">
+            <p>目前沒有找到相關的酒譜推薦</p>
           </div>
-
-          <button
-            className="recommendation-arrow recommendation-arrow--next"
-            onClick={handleNextSlide}
-            disabled={totalSlides <= 1}
-          >
-            <span className="material-symbols-outlined">chevron_right</span>
-          </button>
-        </div>
+        )}
       </section>
     </>
   );

@@ -19,8 +19,27 @@ export default function RecipeContent() {
   //推薦酒譜slide的當前索引
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  //推薦酒譜每次顯示的卡片數量
-  const cardsPerSlide = 3;
+  //推薦酒譜slide每次顯示的卡片數量
+  const [cardsPerSlide, setCardsPerSlide] = useState(() => {
+    if (window.innerWidth < 768) return 1;
+    if (window.innerWidth < 992) return 2;
+    return 3;
+  });
+
+  //綁定監聽器，監聽設備寬度改變投影片張數
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerSlide(1);
+      } else if (window.innerWidth < 992) {
+        setCardsPerSlide(2);
+      } else {
+        setCardsPerSlide(3);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // 元件載入時，根據 id 找到對應的酒譜
   useEffect(() => {
@@ -104,12 +123,9 @@ export default function RecipeContent() {
       <Navbar />
 
       <section className="section-recipe-content">
-        <div
-          className="titles d-flex 
-        justify-content-center mb-15"
-        >
-          <h2>{recipe.title_en}</h2>
-          <h2>{recipe.title}</h2>
+        <div className="titles ">
+          <h2 className="title">{recipe.title_en}</h2>
+          <h2 className="title">{recipe.title}</h2>
         </div>
 
         <div className="recipe-content-details">
@@ -166,7 +182,7 @@ export default function RecipeContent() {
 
       {/* 希望在點擊RecipeCard的箭頭之後能夠把該酒譜的filters屬性帶過來RecipeContent，並在div.recipe-recommendations-slider裡面渲染<RecipeCard />，並透過兩個arrow進行切換多個slide，篩選的邏輯是"or"，比如說該filters屬性的內容是「"口感風味": "清爽系",
       "基酒類型": "蘭姆酒","酒精濃度": "中酒精(15-25%)"」,那會篩選出口感風味=清爽系or基酒類型=蘭姆酒or酒精濃度=中酒精(15-25%)。 */}
-      <section className="recipe-recommendations">
+      <section className="section-recipe-recommendations">
         <div className="recommendations-title">
           <h3>你可能也會喜歡...</h3>
           <p className="recommendations-subtitle">

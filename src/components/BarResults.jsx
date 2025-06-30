@@ -162,17 +162,9 @@ export default function BarResults() {
       </div>
 
       {/* 排序控制按鈕 */}
-      <div className="sort-control">
-        <div className="sort-info">
-          <span>找到{sortedBars.length}個酒吧</span>
-          <span className="sort-status">
-            目前排序：按人氣
-            <strong>{sortDescending ? "由高到低" : "由低到高"}</strong>
-          </span>
-        </div>
-
+      <div className="sort-controls">
         <button
-          className="btn-clear-filters"
+          className="btn-clear"
           onClick={handleClearFilters}
           disabled={!hasActiveFilters}
         >
@@ -189,6 +181,14 @@ export default function BarResults() {
           </span>
           切換排序
         </button>
+      </div>
+
+      <div className="sort-info">
+        <span>找到{sortedBars.length}個酒吧</span>
+        <span className="sort-status">
+          目前排序：按人氣
+          <strong>{sortDescending ? " 由高到低" : " 由低到高"}</strong>
+        </span>
       </div>
 
       {/* 酒吧搜尋結果卡片   */}
