@@ -1,4 +1,3 @@
-// src/components/AuthModal.jsx
 import "./authModal.scss";
 
 import { useState } from "react";
@@ -25,7 +24,7 @@ export default function AuthModal({ isOpen, onClose }) {
   // 載入狀態
   const [isLoading, setIsLoading] = useState(false);
 
-  // 處理輸入框變化
+  // 會綁定在input的onChange，處理輸入框變化，更新formData，input的value就會取得新值
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({

@@ -1,5 +1,3 @@
-// src/contexts/AuthContext.jsx
-
 import { createContext, useContext, useState, useEffect } from "react";
 
 // 1. 建立 Context（就像建立一個公告板）

@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // 新增：控制登入 Modal 的顯示
+  // 控制登入 Modal 的顯示
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   // 切換漢堡選單開關
