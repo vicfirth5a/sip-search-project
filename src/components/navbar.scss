@@ -1,0 +1,126 @@
+/* 加到你的 home.scss 中，或建立新的 navbar.scss */
+
+/* 桌機版登入區域的使用者資訊 */
+.desktop-login {
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .welcome-text {
+      color: #ecdec3;
+      font-weight: 500;
+    }
+
+    .logout-btn {
+      background: none;
+      border: 1px solid #ecdec3;
+      color: #ecdec3;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #b5650e;
+        border-color: #b5650e;
+        color: white;
+      }
+    }
+  }
+
+  /* 原本的註冊/登入按鈕 */
+  button:not(.logout-btn) {
+    background: none;
+    border: none;
+    color: #ecdec3;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #b5650e;
+    }
+  }
+}
+
+/* 手機版選單中的使用者資訊 */
+.mobile-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 40px;
+  color: #ecdec3;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 500;
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(181, 101, 14, 0.1),
+    rgba(181, 101, 14, 0.2)
+  );
+  border-color: #b5650e;
+
+  .material-symbols-outlined {
+    font-size: 28px;
+    color: #b5650e;
+  }
+}
+
+/* 手機版登出按鈕的特殊樣式 */
+.logout-item {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 107, 107, 0.1),
+    rgba(255, 107, 107, 0.2)
+  ) !important;
+  border-color: #ff6b6b !important;
+  color: #ff6b6b !important;
+
+  &:hover {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 107, 107, 0.2),
+      rgba(255, 107, 107, 0.3)
+    ) !important;
+    border-color: #ff6b6b !important;
+    color: #ff6b6b !important;
+
+    .material-symbols-outlined {
+      color: #ff6b6b !important;
+    }
+  }
+
+  .material-symbols-outlined {
+    color: #ff6b6b;
+  }
+}
+
+/* 響應式調整 */
+@media (max-width: 992px) {
+  .desktop-login .user-info {
+    .welcome-text {
+      font-size: 14px;
+    }
+
+    .logout-btn {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-user-info {
+    padding: 16px 32px;
+    font-size: 20px;
+
+    .material-symbols-outlined {
+      font-size: 24px;
+    }
+  }
+}
