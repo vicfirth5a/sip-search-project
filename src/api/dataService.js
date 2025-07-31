@@ -1,6 +1,6 @@
 const BASE_URL = import.meta.env.PROD
-  ? "https://vicfirth5a.github.io/sip-search-project/" // 請替換成你的用戶名
-  : "";
+  ? "https://vicfirth5a.github.io/sip-search-project/" // 用戶名
+  : "/sip-search-project/";
 // 開發環境使用相對路徑
 
 export const fetchBarsData = async () => {

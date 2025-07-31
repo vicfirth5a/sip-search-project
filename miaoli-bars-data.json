@@ -1,0 +1,113 @@
+[
+  {
+    "id": 34,
+    "name": "上癮餐酒館 Obsession Bar",
+    "description": "位於竹南運動公園旁的黑色貨櫃屋餐酒館，以其獨特的工業風格設計和精心調製的雞尾酒聞名。店內提供超過50種精釀啤酒和創意調酒，包括招牌的浮誇神燈調酒和氮氣飲品，每一杯都如藝術品般精美。餐點方面，非飯燉飯和菲力牛排是不可錯過的招牌料理，搭配微醺的調酒享用更是絕佳體驗。每日Happy Hour時段提供經典調酒買一送一，週末還有駐唱歌手現場演出，營造出輕鬆愉快的氛圍。無論是下班後的放鬆小酌，還是朋友聚會、生日派對，這裡都能提供完美的微醺體驗。",
+    "region": "苗栗縣",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 2,
+    "isReservable": true,
+    "likeCount": 127,
+    "favoriteCount": 89,
+    "minimum_spend": 300,
+    "contactInfo": {
+      "address": "苗栗縣竹南鎮公北一路151號",
+      "addressUrl": "https://www.google.com/maps/place/上癮餐酒館+Obsession+Bar/@24.6915563,120.8866541,17z/data=!3m1!4b1!4m6!3m5!1s0x3469a6d5e5e5e5e5:0x1234567890abcdef!8m2!3d24.6915563!4d120.88883279999999!16s%2Fg%2F11f5p8q9z9?entry=ttu",
+      "phone": "0901-193-949",
+      "coordinates": {
+        "lat": 24.6915563,
+        "lng": 120.88883279999999
+      },
+      "openingHours": {
+        "sunday": "17:00-02:00",
+        "monday": "17:00-02:00",
+        "tuesday": "17:00-02:00", 
+        "wednesday": "17:00-02:00",
+        "thursday": "17:00-02:00",
+        "friday": "17:00-02:00",
+        "saturday": "17:00-02:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "17:00-02:00",
+        "closingTime": "02:00"
+      }
+    }
+  },
+  {
+    "id": 35,
+    "name": "69 Bar 陸酒吧",
+    "description": "隱身在苗栗市區的小巧酒吧，以其溫馨的氛圍和親切的服務著稱。店內裝潢簡約而溫暖，昏黃的燈光營造出放鬆的夜晚氣氛。調酒師擅長製作各種經典與創新調酒，從威士忌系列到清爽的mojito應有盡有。特別推薦店家的signature shot，三人以上即贈送一排shot，讓朋友聚會更加熱鬧。店內還提供精選的啤酒和小食，搭配調酒享用十分愜意。每到週末，這裡總是聚集著三五好友，在音樂聲中度過美好的夜晚時光。店家經常舉辦各種主題活動，讓每次造訪都有不同的驚喜，是當地人喜愛的聚會場所。",
+    "region": "苗栗縣",
+    "category": "北部", 
+    "type": "音樂酒吧",
+    "priceLevel": 2,
+    "isReservable": false,
+    "likeCount": 73,
+    "favoriteCount": 45,
+    "minimum_spend": 250,
+    "contactInfo": {
+      "address": "苗栗市恭敬里東海街16號",
+      "addressUrl": "https://www.google.com/maps/place/69+Bar+陸酒吧/@24.0293504,120.2727653,17z/data=!3m1!4b1!4m6!3m5!1s0x3469a1c2b3b3b3b3:0x9876543210fedcba!8m2!3d24.0293504!4d120.274944!16s%2Fg%2F11c2w8x7y6?entry=ttu",
+      "phone": "037-332-669",
+      "coordinates": {
+        "lat": 24.0293504,
+        "lng": 120.274944
+      },
+      "openingHours": {
+        "sunday": "21:30-01:30",
+        "monday": "21:30-01:30",
+        "tuesday": "休息",
+        "wednesday": "21:30-01:30",
+        "thursday": "21:30-01:30",
+        "friday": "21:30-01:30",
+        "saturday": "21:30-01:30"
+      },
+      "currentStatus": {
+        "isOpen": false,
+        "message": "休息中",
+        "todayHours": "休息",
+        "closingTime": "休息"
+      }
+    }
+  },
+  {
+    "id": 36,
+    "name": "Ferryman擺渡人餐酒館",
+    "description": "充滿上海不夜城風情的特色餐酒館，以其獨特的裝潢風格和豐富的威士忌收藏聞名。店內收藏超過100種威士忌，從經典的蘇格蘭威士忌到日本威士忌應有盡有，是威士忌愛好者的天堂。除了威士忌外，調酒師還精心製作各種經典調酒和港式茶點，讓客人在品酒的同時也能享受美食。店內裝潢融合了復古與現代元素，營造出神秘而優雅的氛圍。特別值得一提的是，店內還有海賊王主題的裝飾，為用餐增添了趣味性。每到夜晚，這裡總是聚集著追求品味生活的客人，在live band的演奏中度過美好的夜晚。無論是商務聚餐還是朋友小聚，這裡都能提供專業的服務和優質的體驗。",
+    "region": "苗栗縣",
+    "category": "北部",
+    "type": "運動酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 156,
+    "favoriteCount": 112,
+    "minimum_spend": 450,
+    "contactInfo": {
+      "address": "苗栗縣竹南鎮和平街76號",
+      "addressUrl": "https://www.google.com/maps/place/Ferryman擺渡人餐酒館/@24.6934587,120.8720527,17z/data=!3m1!4b1!4m6!3m5!1s0x3469a6d4c4c4c4c4:0x1a2b3c4d5e6f7890!8m2!3d24.6934587!4d120.8742314!16s%2Fg%2F11h3r9s8t7?entry=ttu",
+      "phone": "037-550-078",
+      "coordinates": {
+        "lat": 24.6934587,
+        "lng": 120.8742314
+      },
+      "openingHours": {
+        "sunday": "18:30-02:00",
+        "monday": "18:30-02:00",
+        "tuesday": "休息",
+        "wednesday": "18:30-02:00", 
+        "thursday": "18:30-02:00",
+        "friday": "18:30-02:00",
+        "saturday": "18:30-02:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "18:30-02:00",
+        "closingTime": "02:00"
+      }
+    }
+  }
+]

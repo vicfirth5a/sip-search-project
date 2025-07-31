@@ -152,6 +152,7 @@
     text-align: center;
     line-height: 2;
     font-size: 20px;
+    align-items: stretch;
 
     @media (max-width: 992px) {
       flex-direction: column;
@@ -159,14 +160,14 @@
     }
 
     .bar-contact-info__map {
-      width: 500px;
-      height: 500px;
+      width: 50%;
+      aspect-ratio: 1/1;
       background-color: #0005;
       margin: auto;
-      @media (max-width: 768px) {
-        width: 300px;
-        height: 300px;
-      }
+      // @media (max-width: 768px) {
+      //   width: 300px;
+      //   height: 300px;
+      // }
     }
 
     .bar-contact-info__txt {

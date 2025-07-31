@@ -7,7 +7,7 @@ import RecipeFilterModal from "../components/RecipeFilterModal.jsx";
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Banner />
     </div>
   );

@@ -110,7 +110,7 @@ export default function RecipeContent() {
   if (!recipe) {
     return (
       <>
-        <Navbar />
+        {/* <Navbar /> */}
         <div style={{ textAlign: "center", padding: "50px" }}>
           <p>載入中...</p>
         </div>
@@ -120,7 +120,7 @@ export default function RecipeContent() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <section className="section-recipe-content">
         <div className="titles ">

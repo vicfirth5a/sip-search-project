@@ -56,13 +56,17 @@ export default function BarResults() {
   const handleFilterClick = (district) => {
     //這個函式的主要功能是當Option-list裡面的option被點擊時，會導航至新的網址
     const newParams = new URLSearchParams(searchParams);
+    //如果網址本身已包含某地區(代表已經是當前的篩選條件)，則把該地區從篩選條件刪除
     if (newParams.getAll("area").includes(district)) {
       const areas = newParams
         .getAll("area")
         .filter((item) => item !== district);
+      //先把舊的全部刪除
       newParams.delete("area");
+      //再加入新的篩選條件
       areas.forEach((area) => newParams.append("area", area));
     } else {
+      //網址本身沒有該地區，直接加進去篩選條件
       newParams.append("area", district);
     }
     setSearchParams(newParams, { replace: true });
@@ -106,32 +110,60 @@ export default function BarResults() {
   };
 
   //生成要顯示的頁碼陣列
+  // const getPageNumbers = (totalPages) => {
+  //   const pages = [];
+  //   const maxVisiblePages = 10;
+
+  //   //先聲明總頁數不超過10頁的，顯示全部頁碼
+  //   if (totalPages < maxVisiblePages) {
+  //     for (let i = 1; i <= totalPages; i++) {
+  //       pages.push(i);
+  //     }
+  //   } else {
+  //     let startPage = Math.max(1, currentPage - 4);
+  //     let endPage = Math.min(totalPages, currentPage + 5);
+
+  //     if (endPage - startPage < maxVisiblePages - 1) {
+  //       if (startPage === 1) {
+  //         endPage = 10;
+  //       } else {
+  //         startPage = endPage - (maxVisiblePages - 1);
+  //       }
+  //     }
+  //     for (let i = startPage; i <= endPage; i++) {
+  //       pages.push(i);
+  //     }
+  //   }
+
+  //   return pages;
+  // };
+
   const getPageNumbers = (totalPages) => {
-    const pages = [];
+    // 頁碼最多顯示10頁
     const maxVisiblePages = 10;
+    //起始頁與結束頁不一定是1跟10，得考慮"總頁數"與"目前所在頁數"
+    let startPage, endPage;
 
-    //先聲明總頁數不超過10頁的，顯示全部頁碼
-    if (totalPages < maxVisiblePages) {
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
+    if (totalPages <= maxVisiblePages) {
+      startPage = 1;
+      endPage = totalPages;
     } else {
-      let startPage = Math.max(1, currentPage - 4);
-      let endPage = Math.min(totalPages, currentPage + 5);
+      // 讓目前頁碼盡量在中間
+      //如果"目前頁碼"扣掉5頁之後變負數或0，那起始頁就用1
+      startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+      endPage = startPage + maxVisiblePages - 1;
 
-      if (endPage - startPage < maxVisiblePages - 1) {
-        if (startPage === 1) {
-          endPage = 10;
-        } else {
-          startPage = endPage - (maxVisiblePages - 1);
-        }
-      }
-      for (let i = startPage; i <= endPage; i++) {
-        pages.push(i);
+      // 如果endPage超過總頁數，往前補
+      if (endPage > totalPages) {
+        endPage = totalPages;
+        startPage = endPage - maxVisiblePages + 1;
       }
     }
 
-    return pages;
+    return Array.from(
+      { length: endPage - startPage + 1 },
+      (_, i) => startPage + i
+    );
   };
 
   const filteredBars = filterBars();
@@ -239,7 +271,12 @@ export default function BarResults() {
               </li>
             ))}
 
-            <li className="pagination-item" onClick={() => handleNextPage()}>
+            <li
+              className={`pagination-item ${
+                currentPage === totalPages ? "disabled" : ""
+              }`}
+              onClick={() => handleNextPage()}
+            >
               下一頁
             </li>
           </ul>

@@ -5,7 +5,7 @@ import RecipeResults from "../components/RecipeResults.jsx";
 export default function RecipeSearch() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <RecipeResults />
     </>
   );
