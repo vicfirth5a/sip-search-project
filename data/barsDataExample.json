@@ -1,0 +1,39 @@
+[
+  {
+    "id": 31,
+    "name": "Guru House",
+    "description": " 一個顛覆你對「早午餐」與「酒吧」既定印象的創意空間。在這裡，早餐不再只是匆忙的日常，而是一種可以微醺地開始每一天的生活態度。品牌創立於三位好友的某個深夜對談中，彼時他們一邊喝酒一邊思考現代都市人被壓力推著走的生活，萌生了打造「早午餐酒吧」的念頭。於是，Guru House 應運而生，一個讓人可以「吃、飽、喝、醉」放鬆地享受早晨與白晝的所在，也是一種對生活節奏重新定義的提案。",
+    "region": "新竹縣",
+    "category": "北部",
+    "type": "調酒酒吧",
+    "priceLevel": 3,
+    "isReservable": true,
+    "likeCount": 48,
+    "favoriteCount": 67,
+    "minimum_spend": 380,
+    "contactInfo": {
+      "address": "新北市中和區中安街210號",
+      "addressUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8505531017645!2d121.54479809999998!3d25.039145299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0e2e035e5%3A0xc2381f52a1189251!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61MjE55be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1741878589322!5m2!1szh-TW!2stw",
+      "phone": "02-2773-0080",
+      "coordinates": {
+        "lat": 24.999071628305717,
+        "lng": 121.51185982552487
+      },
+      "openingHours": {
+        "sunday": "18:30-01:00",
+        "monday": "18:30-01:00",
+        "tuesday": "休息",
+        "wednesday": "18:30-01:00",
+        "thursday": "18:30-01:00",
+        "friday": "18:30-01:00",
+        "saturday": "18:30-01:00"
+      },
+      "currentStatus": {
+        "isOpen": true,
+        "message": "營業中",
+        "todayHours": "18:30-01:00",
+        "closingTime": "01:00"
+      }
+    }
+  }
+]
