@@ -123,30 +123,20 @@ img {
     }
 
     .option-values {
-      // width: 0;
-      // flex-grow: 1;
       width: 100%;
       overflow-x: auto;
       white-space: nowrap;
       display: flex;
-      // justify-content: center;
       align-items: center;
       gap: 16px;
       padding: 12px 24px;
       list-style: none;
       scroll-behavior: smooth;
-      // border: 1px solid $primary1;
-      // border-radius: 1000px;
-      // margin-bottom: 16px;
 
       scrollbar-width: none;
       -ms-overflow-style: none;
       &::-webkit-scrollbar {
         display: none; // 隱藏捲軸（Chrome/Safari）
-      }
-
-      @media (max-width: 992px) {
-        justify-content: center;
       }
 
       .option-value {

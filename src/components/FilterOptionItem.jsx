@@ -14,6 +14,7 @@ export default function FilterOptionItem({
 
   // 檢查是否需要滾動按鈕
   const checkScrollability = () => {
+    //scrollContainerRef.current存取了ul.option-values的DOM因為ul.option-values使用ref=scrollContainerRef
     const container = scrollContainerRef.current;
     if (!container) return;
 
@@ -51,6 +52,9 @@ export default function FilterOptionItem({
 
     // 初次檢查
     checkScrollability();
+
+    // 強制滾動到最左側
+    container.scrollLeft = 0;
 
     const handleScrollEvent = () => checkScrollability();
     const handleResize = () => {
